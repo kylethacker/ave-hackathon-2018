@@ -240,6 +240,14 @@ h3 {
     text-align: center;
 }
 
+/* FORM */
+
+textarea,
+input {
+    font-size: inherit;
+    margin-bottom: 15px;
+}
+
 .color-option {
     display: block;
 }
@@ -253,33 +261,3 @@ h3 {
     border-radius: 50%;
     margin-right: -15px;
 }
-
-.color-option span:nth-of-type(1) {
-    background: #111111;
-}
-
-.color-option span:nth-of-type(2) {
-    background: #222222;
-}
-
-.color-option span:nth-of-type(3) {
-    background: #222222;
-}
-
-.color-option span:nth-of-type(4) {
-    background: #333333;
-}
-
-.color-option span:nth-of-type(5) {
-    background: #444444;
-}
-
-.color-option span:nth-of-type(6) {
-    background: #555555;
-}
-
-.color-option span:nth-of-type(7) {
-    background: #666666;
-}
-
-

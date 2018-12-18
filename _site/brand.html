@@ -15,7 +15,13 @@
 
 	<link rel="stylesheet" href="/assets/main.css">
 	<link rel="stylesheet" href="/css/style.css">
-	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+</head>
+
 
 <body id="brand">
 
@@ -61,41 +67,22 @@
 				<span class="color-option">
 					<label>
 						<input type="radio" name="color" value="amazeballs">
-						<span data-hex="#FFFFFF">white</span>
-						<span data-hex="#FFFFFF">black</span>
-						<span data-hex="#FFFFFF">color1</span>
-						<span data-hex="#FFFFFF">color2</span>
-						<span data-hex="#FFFFFF">color3</span>
-						<span data-hex="#FFFFFF">color4</span>
-						<span data-hex="#FFFFFF">color5</span>
-					</label>
-				</span>
-				<span class="color-option">
-					<label>
-						<input type="radio" name="color" value="amazeballs">
-						<span data-hex="#FFFFFF">white</span>
-						<span data-hex="#FFFFFF">black</span>
-						<span data-hex="#FFFFFF">color1</span>
-						<span data-hex="#FFFFFF">color2</span>
-						<span data-hex="#FFFFFF">color3</span>
-						<span data-hex="#FFFFFF">color4</span>
-						<span data-hex="#FFFFFF">color5</span>
-					</label>
-				</span>
-				<span class="color-option">
-					<label>
-						<input type="radio" name="color" value="amazeballs">
-						<span data-hex="#FFFFFF">white</span>
-						<span data-hex="#FFFFFF">black</span>
-						<span data-hex="#FFFFFF">color1</span>
-						<span data-hex="#FFFFFF">color2</span>
-						<span data-hex="#FFFFFF">color3</span>
-						<span data-hex="#FFFFFF">color4</span>
-						<span data-hex="#FFFFFF">color5</span>
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
 					</label>
 				</span>
 			</div>
 		</section>
+		<script>
+            (function ($) {
+                $('[data-hex]').each(function(){
+                    var color = $(this).attr('data-hex');
+                    $(this).css('background-color', color);
+                });
+            })(jQuery);
+		</script>
 
 		<section id="block">
 			<h3>Type</h3>
@@ -140,21 +127,23 @@
 				<form>
 
 					<div class="col">
-						<input type="checkbox" name="gender" value="male" checked> Lead Capture Bubble<br>
-						<input type="checkbox" name="gender" value="female"> Buyers Guide<br>
-						<input type="checkbox" name="gender" value="other"> Sellers Guide<br>
-						<input type="checkbox" name="gender" value="other"> Testimonials<br>
-						<input type="checkbox" name="gender" value="other"> About Page<br>
-						<input type="checkbox" name="gender" value="other"> Video Header<br>
-						<input type="checkbox" name="gender" value="other"> Home Finder<br>
+						<input type="checkbox" name="gender" value="Lead Capture Bubble" checked> Lead Capture Bubble<br>
+						<input type="checkbox" name="gender" value="Buyers Guide" checked> Buyers Guide<br>
+						<input type="checkbox" name="gender" value="Sellers Guide" checked> Sellers Guide<br>
+						<input type="checkbox" name="gender" value="Testimonials" checked> Testimonials<br>
+						<input type="checkbox" name="gender" value="About Page" checked> About Page<br>
+						<input type="checkbox" name="gender" value="Video Header" checked> Video Header<br>
+						<input type="checkbox" name="gender" value="Home Finder" checked> Home Finder<br>
 					</div>
 					<div class="col">
-						<input type="checkbox" name="gender" value="other"> Home Evaluation<br>
-						<input type="checkbox" name="gender" value="other"> Property Search<br>
-						<input type="checkbox" name="gender" value="other"> Mortgage Calculator<br>
-						<input type="checkbox" name="gender" value="other"> Office Listings<br>
-						<input type="checkbox" name="gender" value="other"> Featured Listings<br>
+						<input type="checkbox" name="gender" value="Home Evaluation" checked> Home Evaluation<br>
+						<input type="checkbox" name="gender" value="Property Search" checked> Property Search<br>
+						<input type="checkbox" name="gender" value="Mortgage Calculator" checked> Mortgage Calculator<br>
+						<input type="checkbox" name="gender" value="Office Listings" checked> Office Listings<br>
+						<input type="checkbox" name="gender" value="Featured Listings" checked> Featured Listings<br>
 						<input type="checkbox" name="gender" value="other"> Custom Page<br>
+
+						<input type="text" name="custom_page" placeholder="Enter custom page name ..."><br>
 					</div>
 
 

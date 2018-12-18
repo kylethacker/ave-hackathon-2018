@@ -3,12 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="0b9bdffa-f7e2-4eda-9309-23882e2c3c41" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/brand.html" afterPath="$PROJECT_DIR$/_layouts/brand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/complete.html" afterPath="$PROJECT_DIR$/_layouts/complete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/404.html" afterPath="$PROJECT_DIR$/_site/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/brand.html" afterPath="$PROJECT_DIR$/_site/brand.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/complete.html" afterPath="$PROJECT_DIR$/_site/complete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/designer.html" afterPath="$PROJECT_DIR$/_site/designer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2018/12/18/welcome-to-jekyll.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2018/12/18/welcome-to-jekyll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/layout.html" afterPath="$PROJECT_DIR$/_site/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/review.html" afterPath="$PROJECT_DIR$/_site/review.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,21 +37,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="brand.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="brand.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="78" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+            <state relative-caret-position="616">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="61" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="256" column="24" lean-forward="false" selection-start-line="256" selection-start-column="24" selection-end-line="256" selection-end-column="24" />
+            <state relative-caret-position="848">
+              <caret line="265" column="1" lean-forward="false" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -104,7 +121,6 @@
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_site/assets/main.css" />
         <option value="$PROJECT_DIR$/sass/_layout.scss" />
-        <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/brand.md" />
         <option value="$PROJECT_DIR$/complete.md" />
         <option value="$PROJECT_DIR$/review.md" />
@@ -115,8 +131,9 @@
         <option value="$PROJECT_DIR$/_layouts/complete.html" />
         <option value="$PROJECT_DIR$/_layouts/designer.html" />
         <option value="$PROJECT_DIR$/layout.md" />
-        <option value="$PROJECT_DIR$/_layouts/brand.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/_includes/header.html" />
+        <option value="$PROJECT_DIR$/_layouts/brand.html" />
       </list>
     </option>
   </component>
@@ -157,6 +174,11 @@
             <path>
               <item name="ave-hackathon-2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="ave-hackathon-2018" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ave-hackathon-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ave-hackathon-2018" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="_includes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ave-hackathon-2018" type="b2602c69:ProjectViewProjectNode" />
@@ -214,12 +236,12 @@
       <option name="presentableId" value="Default" />
       <updated>1545172767672</updated>
       <workItem from="1545172774128" duration="875000" />
-      <workItem from="1545174556589" duration="1598000" />
+      <workItem from="1545174556589" duration="2639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2770000" />
+    <option name="totallyTimeSpent" value="3811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -309,6 +331,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -427,13 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -571,18 +587,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
+    <entry file="file://$PROJECT_DIR$/_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="78" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        <state relative-caret-position="360">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="256" column="24" lean-forward="false" selection-start-line="256" selection-start-column="24" selection-end-line="256" selection-end-column="24" />
+        <state relative-caret-position="848">
+          <caret line="265" column="1" lean-forward="false" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="61" selection-end-column="17" />
           <folding />
         </state>
       </provider>
