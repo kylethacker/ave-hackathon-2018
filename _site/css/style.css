@@ -431,7 +431,10 @@ input[name=custom_page_input] {
 }
 
 .preview-block img {
-    margin:15px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 10px solid #fff;
+    border-radius: 10px;
+    margin: 30px 0;
 }
 
 /* REVIEW */
