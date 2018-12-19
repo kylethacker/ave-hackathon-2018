@@ -25,6 +25,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     text-align: left;
+    -webkit-font-smoothing:antialiased;
 }
 
 /**
@@ -83,6 +84,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+h2{font-size: 24px; font-weight: 800;}
+
+h3 {
+    font-weight: 800;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    margin: 0 0 24px 0;
+    padding: 0 0 8px 0;
+}
 h4{font-weight:600;}
 
 h4.body-font{margin: 48px 0 16px 0;}
@@ -114,7 +124,7 @@ a:hover {
 
 .container {
     max-width: 1040px;
-    margin: 80px auto 0 auto;
+    margin: 48px auto 80px auto;
     vertical-align: top;
     height: 100%;
 }
@@ -132,12 +142,14 @@ a:hover {
 }
 
 #content {
-    width: 800px;
+    width: 696px;
     height: 100%;
     margin: 0 0 0 368px;
     display: inline-block;
     vertical-align: top;
 }
+
+h2.tracker{margin-top:16px; font-weight:400;}
 
 .box {
     width: 320px;
@@ -187,12 +199,6 @@ a:hover {
     margin: 0 0 80px 0;
 }
 
-h3 {
-    font-weight: 800;
-    border-bottom: 2px solid #000;
-    margin: 0 0 24px 0;
-    padding: 0 0 24px 0;
-}
 
 #button {
     padding: 8px 16px;
@@ -225,6 +231,21 @@ h3 {
     vertical-align: top;
 }
 
+input[type="text"],
+#bio{
+    font-size: inherit;
+    margin-bottom: 15px;
+    background: #F6F5F1;
+    border: 0;
+    padding: 8px 16px;
+    line-height: 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    width:100%;
+    box-sizing: border-box;
+}
+
+
 .type-example {
     margin: 0 24px 0 0;
     display: inline-block;
@@ -242,7 +263,7 @@ h3 {
     border-radius: 4px;
     vertical-align: center;
     display: block;
-    opacity:0.5;
+    opacity: 0.5;
     
 }
 
@@ -256,12 +277,77 @@ h3 {
         opacity:1;
 }
 
-
-
-.type-label {
-    max-width: 120px;
-    text-align: center;
+.photography-image {
+    max-width:320px;
+    border: 4px solid transparent;
+    border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
 }
+
+
+.photography-example input[type="checkbox"] {
+    display:none;
+}
+
+
+.photography-example input[type="checkbox"]:checked ~ .photography-image{
+    border: 4px solid #00465A;
+}
+
+.photography-example{display: inline-block; vertical-align: top; margin: 0 16px 16px 0;}
+
+
+/*.photography-example input[type="checkbox"]:checked ~ .photography-image::after{
+    display: block;
+    height: 32px;
+    content: "Test";
+    background-color:#00465A;
+    color:red;
+    position: relative;
+    z-index: 2;
+    line-height: 32px;
+    padding-left: 8px;
+
+}
+*/
+
+.photography-selected{
+    display: none;
+    padding: 8px 10px;
+
+}
+
+.checkmark-outline{padding-right:8px;}
+.photography-example input[type="checkbox"]:checked ~ .photography-selected{
+    background-color: #00465A;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    margin-top:-44px;
+    width: 320px;
+    color:#FFF;
+    border-radius: 0 0 4px 4px;
+
+}
+
+.theme-details{
+    opacity:0;
+    position: absolute;
+    width: 320px;
+    height:400px;
+    padding: 24px;
+    box-sizing: border-box;
+    background-image: linear-gradient(-180deg, #000000 0%, rgba(20,20,20,0.50) 100%);
+    color:#FFF;
+    border-radius: 4px;
+}
+
+
+.box:hover .theme-details{
+    opacity:1;
+}
+
 
 /* FORM */
 
@@ -277,17 +363,25 @@ input {
 }
 
 .color-option {
-    display: block;
+    display: inline-block;
+    margin: 0 48px 0 0;
 }
+
+.color-row#one{margin-bottom: 48px;}
+.color-row#two{margin-bottom: 0;}
 
 .color-option span {
     text-indent: -9999px;
     overflow: hidden;
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    margin-right: -15px;
+    margin-right: -24px;
+}
+
+.color-option input[type="radio"] {
+    display:none;
 }
 
 input[name=custom_page_input] {
@@ -295,8 +389,33 @@ input[name=custom_page_input] {
 }
 
 .layout-options a {
-    margin: 15px 0;
-    display:block;
+    margin: 16px 16px 16px 0;
+    display:inline-block;
+
+}
+
+.layout-options a:nth-child(2n) {
+    margin-right:0;
+}
+
+
+.layout-title{display: block;}
+
+.layouts-btn{    
+    padding: 8px 16px;
+    display: block;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid rgba(20, 20, 20, 0.25);
+    box-shadow: 0 2px 4px 0 rgba(20, 20, 20, 0.10);}
+
+.col label{
+    display: block;
+    
+}
+
+.col input[type="checkbox"]:checked{
+
 }
 
 #button.submit:not(.ready) {

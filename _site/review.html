@@ -88,6 +88,7 @@
                             $('#features').html(features);
                         } else if ( name == 'exclude_features' ){
                             var features =$('#features').html();
+                            console.log(value);
                             value = value.split(',');
                             $.each(value, function(i){
                                 features = features.replace(value[i]+"<br>", '');
