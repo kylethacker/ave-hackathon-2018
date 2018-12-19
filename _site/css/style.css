@@ -366,7 +366,9 @@ input[type="text"],
 /* FORM */
 
 #resetData {
-    font-size: xx-small;
+    font-size: 24px;
+    padding:10px;
+    color:#FFF;
 }
 
 textarea,
