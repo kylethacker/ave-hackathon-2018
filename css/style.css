@@ -162,6 +162,9 @@ h2.tracker{margin-top:16px; font-weight:400;}
 
 .box .description {
     display: block;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 8px 0 16px 0;
 }
 
 .box .image {
@@ -300,20 +303,6 @@ input[type="text"],
 
 .photography-example{display: inline-block; vertical-align: top; margin: 0 16px 16px 0;}
 
-
-/*.photography-example input[type="checkbox"]:checked ~ .photography-image::after{
-    display: block;
-    height: 32px;
-    content: "Test";
-    background-color:#00465A;
-    color:red;
-    position: relative;
-    z-index: 2;
-    line-height: 32px;
-    padding-left: 8px;
-
-}
-*/
 
 .photography-selected{
     display: none;
