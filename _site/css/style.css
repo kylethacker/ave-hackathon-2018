@@ -172,7 +172,7 @@ a:hover {
     display: inline-block;
     height: 20px;
     background-color: #43B68A;
-    width: 70%;
+    width: 0%;
     padding: 0;
     border: 0;
 }
@@ -280,4 +280,15 @@ input {
     height: 30px;
     border-radius: 50%;
     margin-right: -15px;
+}
+
+.layout-options a {
+    margin: 15px 0;
+    display:block;
+}
+
+/* COMPLETE */
+
+#complete .container {
+    max-width: 500px;
 }
