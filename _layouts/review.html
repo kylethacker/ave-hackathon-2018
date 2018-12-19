@@ -14,6 +14,7 @@
 		<h3>Branding Review</h3>
 		<section id="review">
 			<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
+			<span class="field">Layout Type</span><span id="layout_type" class="value"><img id="wireframe" src=""></span>
 			<span class="field">Page Title</span><span id="page_title" class="value"></span>
 			<span class="field">Biography</span><span id="biography" class="value"></span>
 			<span class="field">Color Palette</span><span id="color" class="value"></span>
@@ -21,7 +22,6 @@
 			<span class="field">Body Font</span><span id="body-font" class="value"></span>
 			<span class="field">Features</span><span id="features" class="value"></span>
 			<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
-			<span class="field">Layout Type</span><span id="layout_type" class="value"></span>
 		</section>
 		<section id="block">
 			<h3>Additional comments</h3>
@@ -71,6 +71,8 @@
                             $('#features').html(features);
                         } else if ( name == 'visual_tone' ){
                             $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+                        } else if ( name == 'layout_type' ){
+                            $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
                         } else if ( name == 'exclude_features' ){
                             var features =$('#features').html();
                             var removed_values = value.split(',');
