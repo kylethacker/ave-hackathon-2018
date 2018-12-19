@@ -530,6 +530,10 @@ input[type=checkbox] {
     margin-bottom: 30px;
 }
 
+#review img#wireframe{
+    display: block;
+}
+
 /* COMPLETE */
 
 #complete .container {
