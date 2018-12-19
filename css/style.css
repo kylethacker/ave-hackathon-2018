@@ -1,6 +1,25 @@
 ---
 ---
 
+
+@font-face {
+    font-family: 'FuturaBTWXX';
+    src: url('/assets/fonts/358540_0_0.eot');
+    src: url('/assets/fonts/358540_0_0.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/358540_0_0.woff2') format('woff2'), url('/assets/fonts/358540_0_0.woff') format('woff'), url('/assets/fonts/358540_0_0.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaBTWXX';
+    src: url('/assets/fonts/358540_4_0.eot');
+    src: url('/assets/fonts/358540_4_0.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/358540_4_0.woff2') format('woff2'), url('/assets/fonts/358540_4_0.woff') format('woff'), url('/assets/fonts/358540_4_0.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
 /**
  * Reset some basic elements
  */
@@ -29,6 +48,7 @@ body {
     flex-direction: column;
     text-align: left;
     -webkit-font-smoothing:antialiased;
+    font-family: "FuturaBTWXX", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /**
