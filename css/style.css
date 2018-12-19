@@ -178,6 +178,8 @@ a:hover {
     width: 0%;
     padding: 0;
     border: 0;
+    transition: width 300ms ease-in-out;
+    -webkit-transition: width 300ms ease-in-out;
 }
 
 .intro {
@@ -223,6 +225,7 @@ h3 {
 .col {
     width: 48%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .type-example {
@@ -265,10 +268,15 @@ h3 {
 
 /* FORM */
 
+#resetData {
+    font-size: xx-small;
+}
+
 textarea,
 input {
     font-size: inherit;
     margin-bottom: 15px;
+    padding:2px 5px;
 }
 
 .color-option {
@@ -285,9 +293,48 @@ input {
     margin-right: -15px;
 }
 
+input[name=custom_page_input] {
+    display: none;
+}
+
 .layout-options a {
     margin: 15px 0;
     display:block;
+}
+
+#button.submit:not(.ready) {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* LAYOUT */
+
+.preview-block {
+    text-align:center;
+}
+
+.preview-block img {
+    margin:15px 0;
+}
+
+/* REVIEW */
+
+#review {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#review .field {
+    width: 300px;
+    vertical-align: top;
+    margin-bottom: 30px;
+}
+
+#review .value {
+    width: 300px;
+    vertical-align: top;
+    margin-bottom: 30px;
 }
 
 /* COMPLETE */

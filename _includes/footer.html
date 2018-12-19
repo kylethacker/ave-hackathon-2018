@@ -2,33 +2,6 @@
 <script>
     (function ($) {
 
-        // Progress checker
-
-	    var form = $('input:not([type=checkbox]), textarea');
-	    var total = form.length;
-	    var progress = 0;
-
-        form.each(function(){
-            var value = $(this).val();
-             if ( value ) {
-                 progress = progress + 1;
-             }
-
-            console.log("on load: " +progress);
-        });
-
-        form.change(function(){
-            var value = $(this).val();
-            if ( value ) {
-                progress = progress + 1;
-            } else {
-                progress = progress - 1;
-            }
-
-            console.log(progress);
-            $('.tracker').text((progress/total * 100) + '% Complete');
-            $('.progress').css('width', (progress/total * 100)+"%");
-        });
 
 
     })(jQuery);

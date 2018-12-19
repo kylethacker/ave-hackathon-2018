@@ -20,6 +20,8 @@
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js""></script>
+
 </head>
 
 
@@ -27,17 +29,18 @@
 
 <div class="container">
 	<div id="sidebar">
-		<h1>Layout</h1>
+		<h1>Build your brand</h1>
+		<h2>Layout</h2>
     </span>
 		<div class="description">Choose a Layout to see a preview
 		</div>
 
-		<a href="/brand" id="button" class="back">Back</a>
+		<a href="/brand#layout" id="button" class="back">Back</a>
 		<div class="layout-options">
-	<a href="/layout-clearsky" class="layout-option"><img src="//placehold.it/144x144"</a>
-	<a href="/layout-bloom" class="layout-option"><img src="//placehold.it/144x144"</a>
-	<a href="/layout-foundation" class="layout-option"><img src="//placehold.it/144x144"</a>
-	<a href="/layout-inspire" class="layout-option"><img src="//placehold.it/144x144"</a>
+	<a href="/layout-clearsky" class="layout-option"><img src="//placehold.it/144x144"/></a>
+	<a href="/layout-bloom" class="layout-option"><img src="//placehold.it/144x144"/></a>
+	<a href="/layout-foundation" class="layout-option"><img src="//placehold.it/144x144"/></a>
+	<a href="/layout-inspire" class="layout-option"><img src="//placehold.it/144x144"/></a>
 </div>
 
 
@@ -54,33 +57,6 @@
 <script>
     (function ($) {
 
-        // Progress checker
-
-	    var form = $('input:not([type=checkbox]), textarea');
-	    var total = form.length;
-	    var progress = 0;
-
-        form.each(function(){
-            var value = $(this).val();
-             if ( value ) {
-                 progress = progress + 1;
-             }
-
-            console.log("on load: " +progress);
-        });
-
-        form.change(function(){
-            var value = $(this).val();
-            if ( value ) {
-                progress = progress + 1;
-            } else {
-                progress = progress - 1;
-            }
-
-            console.log(progress);
-            $('.tracker').text((progress/total * 100) + '% Complete');
-            $('.progress').css('width', (progress/total * 100)+"%");
-        });
 
 
     })(jQuery);

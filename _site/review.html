@@ -20,6 +20,8 @@
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js""></script>
+
 </head>
 
 
@@ -34,43 +36,79 @@
 		<a href="/complete" id="button" class="next">Look's Good!</a>
 	</div>
 	<div id="content">
-
+		<section id="review">
+			<span class="field">Visual Style</span><span id="visual_tone" class="value"></span>
+			<span class="field">Page Title</span><span id="page_title" class="value"></span>
+			<span class="field">Biography</span><span id="biography" class="value"></span>
+			<span class="field">Color Palette</span><span id="color" class="value"></span>
+			<span class="field">Header Font</span><span id="header-font" class="value"></span>
+			<span class="field">Body Font</span><span id="body-font" class="value"></span>
+			<span class="field">Features</span><span id="features" class="value"></span>
+			<span class="field">Features Not included</span><span id="exclude_features" class="value"></span>
+			<span class="field">Layout Type</span><span id="layout_type" class="value"></span>
+		</section>
 	</div>
 </div>
 
 </body>
 
+<!--FORM HELPER-->
+<script>
+    (function ($) {
+
+        // Check Cookies!
+//        $('[name=visual_tone]').val($.cookie('tone'));
+//
+//        if ( $.cookie('layout') ) {
+//            $('.layout-btn').text('Reselect Layout');
+//            $('[name=layout_type]').val($.cookie('layout'));
+//            $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
+//        }
+
+        // UndoSerializeArray
+        if ( $.cookie('formData') ) {
+            var formData = JSON.parse($.cookie('formData'));
+
+            $.each(formData, function(i){
+                $.each(formData[i], function(key, value){
+                    if ( key == "name" ) {
+                        name = value;
+                    }
+                    if ( key == "value" ) {
+                        if ( name == 'features' ) {
+                            var features = $('#'+name).html();
+                            if ( ! features ) {
+                                $('#'+name).html(value + '<br/>')
+                            } else {
+                                $('#'+name).html(features +value+ '<br/>')
+                            }
+                        } else if ( name == 'custom_page_input' ){
+                            var features =$('#features').html();
+                            features = features + value;
+                            $('#features').html(features);
+                        } else if ( name == 'exclude_features' ){
+                            var features =$('#features').html();
+                            value = value.split(',');
+                            $.each(value, function(i){
+                                features = features.replace(value[i]+"<br>", '');
+                            });
+                            $('#features').html(features);
+                            $('#'+name).text(value);
+                        } else {
+                            $('#'+name).text(value);
+                        }
+                    }
+                });
+            });
+
+        }
+
+    })(jQuery);
+</script>
 
 <script>
     (function ($) {
 
-        // Progress checker
-
-	    var form = $('input:not([type=checkbox]), textarea');
-	    var total = form.length;
-	    var progress = 0;
-
-        form.each(function(){
-            var value = $(this).val();
-             if ( value ) {
-                 progress = progress + 1;
-             }
-
-            console.log("on load: " +progress);
-        });
-
-        form.change(function(){
-            var value = $(this).val();
-            if ( value ) {
-                progress = progress + 1;
-            } else {
-                progress = progress - 1;
-            }
-
-            console.log(progress);
-            $('.tracker').text((progress/total * 100) + '% Complete');
-            $('.progress').css('width', (progress/total * 100)+"%");
-        });
 
 
     })(jQuery);

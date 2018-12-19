@@ -20,6 +20,8 @@
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js""></script>
+
 </head>
 
 
@@ -31,8 +33,9 @@
 		<h2>Pick a theme</h2>
 		<div class="description">Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.
 		</div>
-		<a href="#" id="button" class="back">Back</a>
+		<a href="#" id="resetData">Reset Data</a>
 	</div>
+
 	<div id="content">
 		<div class="theme-boxes">
 			<div class="box">
@@ -76,40 +79,32 @@
 		</div>
 	</div>
 </div>
-
 </body>
 
+
+
+<!--FORM HELPER-->
+<script>
+    (function ($) {
+
+        $('.theme-boxes a').mousedown(function(){
+            $.cookie('tone', $(this).find('.description').text());
+        });
+
+	    $('#resetData').click(function(e){
+	        e.preventDefault();
+            $.removeCookie('formData');
+            $.removeCookie('tone');
+            $.removeCookie('layout');
+	        alert('FormData Reset');
+	    });
+
+    })(jQuery);
+</script>
 
 <script>
     (function ($) {
 
-        // Progress checker
-
-	    var form = $('input:not([type=checkbox]), textarea');
-	    var total = form.length;
-	    var progress = 0;
-
-        form.each(function(){
-            var value = $(this).val();
-             if ( value ) {
-                 progress = progress + 1;
-             }
-
-            console.log("on load: " +progress);
-        });
-
-        form.change(function(){
-            var value = $(this).val();
-            if ( value ) {
-                progress = progress + 1;
-            } else {
-                progress = progress - 1;
-            }
-
-            console.log(progress);
-            $('.tracker').text((progress/total * 100) + '% Complete');
-            $('.progress').css('width', (progress/total * 100)+"%");
-        });
 
 
     })(jQuery);
