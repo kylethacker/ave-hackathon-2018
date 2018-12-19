@@ -269,3 +269,9 @@ input {
     margin: 15px 0;
     display:block;
 }
+
+/* COMPLETE */
+
+#complete .container {
+    max-width: 500px;
+}
