@@ -46,14 +46,16 @@
 	<span class="field">Color Palette</span>
 	<span class="value">
 				<div id="colorOptions">
-					<span class="color-option">
-						<span data-hex="#111111">color1</span>
-						<span data-hex="#222222">color2</span>
-						<span data-hex="#333333">color3</span>
-						<span data-hex="#444444">color4</span>
-					</span>
+					<div class="color-option">
+						<div class="color-option-border">
+							<span data-hex="#17415A">color1</span>
+							<span data-hex="#577E8C">color2</span>
+							<span data-hex="#F2F2F0">color3</span>
+							<span data-hex="#F2E3D5">color4</span>
+						</div>
+						<div id="color" class="color-title">Aqua</div>
+					</div>
 				</div>
-				<div id="color"></div>
 			</span>
 	<span class="field">Header Font</span><span id="header-font" class="value"></span>
 	<span class="field">Body Font</span><span id="body-font" class="value"></span>
@@ -79,7 +81,61 @@
             $('#other').text($.cookie('additional_comments' ))
         }
 
-        console.log($.cookie('formData'));
+        //jey them dataz redy for jaky boy
+        var formData = JSON.parse($.cookie('formData'));
+
+        var features_json = {};
+        var color_json = {};
+        var layout_json;
+
+        //layout
+	    //fonts
+//    *Header Copy*
+//        Sans-serif: Montserrat
+//        Serif: Playfair Display
+//        Slab-Serif: Arvo
+//        Script: Dancing Script
+//
+//        *Body Copy*
+//        Sans-serif: Open Sans
+//        Serif: Noto Serif
+        //grab data from formData
+        $.each(formData, function(i){
+            $.each(formData[i], function(key, value){
+                if ( key == "name" ) {
+                    name = value;
+                }
+                if ( key == "value" ) {
+                    if ( name == 'exclude_features' ) {
+                        var exclude = value.toLowerCase().replace(/\s+/g, '_');
+                        exclude = exclude.split(',');
+                        $.each(exclude,function(i){
+                            features_json[exclude[i]] = false;
+                        });
+                    } else if ( name == 'custom_page_input' ){
+                        var features =$('#features').html();
+                        features = features + value;
+                        $('#features').html(features);
+                    } else if ( name == 'visual_tone' ){
+                        $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+                    } else if ( name == 'layout_type' ){
+                        layout_json = value.toLowerCase();
+                    } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
+                        color_json[name] = value;
+                    }
+                }
+            });
+        });
+
+// {"white":"%23333333","black":"%23CCCCCC","color1":"%2FF333DD","color2":"%23DD00FF","color3":"%23DDFFDD","color4":"%23DDFFDD","color5":"%23DDDDFF","color6":"%23FF00DD"}
+
+
+	    //url encode!!!!!!!!!
+
+        console.log(JSON.stringify(features_json));
+        console.log(JSON.stringify(color_json));
+        console.log(JSON.stringify(layout_json));
+
 
     })(jQuery);
 </script>
@@ -147,4 +203,3 @@
     })(jQuery);
 </script>
 </html>
-

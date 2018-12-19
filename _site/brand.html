@@ -220,8 +220,8 @@
 				<div class="block-content photos">
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/1.png">
-							<span class="photography-image"><img src="assets/images/lifestyle/1.png"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/1.jpg">
+							<span class="photography-image"><img src="assets/images/lifestyle/1.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 
 						</label>
@@ -229,16 +229,16 @@
 
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/2.png">
-							<span class="photography-image"><img src="assets/images/lifestyle/2.png"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/2.jpg">
+							<span class="photography-image"><img src="assets/images/lifestyle/2.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 						</label>
 					</div>
 
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/3.png">
-							<span class="photography-image"><img src="assets/images/lifestyle/3.png"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/3.jpg">
+							<span class="photography-image"><img src="assets/images/lifestyle/3.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 
 						</label>
@@ -246,11 +246,29 @@
 
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/4.png">
-							<span class="photography-image"><img src="assets/images/lifestyle/4.png"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/4.jpg">
+							<span class="photography-image"><img src="assets/images/lifestyle/4.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 						</label>
 					</div>
+
+					<div class="photography-example">
+						<label>
+							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/5.jpg">
+							<span class="photography-image"><img src="assets/images/lifestyle/5.jpg"></span>
+							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+
+						</label>
+					</div>
+
+					<div class="photography-example">
+						<label>
+							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/6.jpg">
+							<span class="photography-image"><img src="assets/images/lifestyle/6.jpg"></span>
+							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+						</label>
+					</div>
+
 					<p class="max-reached">Please select a maximimum of three photos, that will help your Designer understand exactly what you like.</p>
 				</div>
 			</section>
@@ -358,7 +376,7 @@
 
         // When colors are picked, setup palettes color1, color2 and etc
         $('[name="color"]').change(function(){
-            var colorOne = $(this).next();
+            var colorOne = $(this).next().find('span:nth-child(1)');
             var colorTwo = colorOne.next();
             var colorThree = colorTwo.next();
             var colorFour = colorThree.next();
