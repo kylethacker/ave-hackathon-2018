@@ -40,7 +40,7 @@
 				<a href="/brand">
 					<div class="theme-details">
 						<h4>Interior</h4>
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span>
+						<span>Looking for a website that focuses on sharing beautiful homes and interiors? We've crafted a unique selection of fonts, colours, images, and features that are optimized to reach your audience. Use our suggestions as a base for your designer to work off of, or make change to guide your designer.</span>
 					</div>	
 					<div class="image"><img src="assets/images/Interior.png">
 
@@ -54,7 +54,7 @@
 	
 					<div class="theme-details">
 						<h4>Lifestyle</h4>	
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>Our lifestyle tone is designed to showcase to your clients an aspiration look and what their life can be like with you as their real estate professional. We’ve assembled a collection of fonts, colours, images, and features optimized to portray a beautiful lifestyle. Use our suggestions as a base for your designer to work off of, or make changes to guide your designer.</span></div>
 					<div class="image"><img src="assets/images/Lifestyle.png"></div>
 					<div class="description">Lifestyle</div>
 				</a>
@@ -63,7 +63,7 @@
 				<a href="/brand">		
 					<div class="theme-details">
 						<h4>Modern</h4>
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>If you’re a real estate professional looking to showcase your modern take on real estate, our Modern style will help you stand out online. We've crafted a unique selection of fonts, colours, images, and features that are optimized to reach your audience. Use our suggestions as a base for your designer to work off of, or make change to guide your designer.</span></div>
 					<div class="image"><img src="assets/images/Modern.png"></div>
 					<div class="description">Modern</div>
 				</a>
@@ -72,7 +72,7 @@
 				<a href="/brand">		
 					<div class="theme-details">
 						<h4>Country</h4>
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>Looking to showcase a calm and collected look at a more rural area? We've designed a visual tone that's warm, inviting and portrays an approachable tone for your clients. Our selection of fonts, colours, images and feature will speak to your audience and help you connect on a personal level. Use our suggestions as a base for your designer to work off of, or make change to guide your designer. </span></div>
 					<div class="image"><img src="assets/images/Country.png"></div>
 					<div class="description">Country</div>
 				</a>
@@ -81,7 +81,7 @@
 				<a href="/brand">
 					<div class="theme-details">
 						<h4>Elegant</h4>		
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>You're an elegant person and you want a website to showcase that. We've crafted a beautiful assortment of images, features, type, and colours to live up to what you bring to your clients. Use our suggestions as a base for your designer to work off of, or make change to guide your designer. </span></div>
 					<div class="image"><img src="assets/images/Elegant.png"></div>
 					<div class="description">Elegant</div>
 				</a>
@@ -90,7 +90,7 @@
 				<a href="/brand">	
 					<div class="theme-details">
 						<h4>City</h4>	
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>You focus on finding homes in the bustling city and want a website that speaks to people looking for the city lifestyle. We've crafted a set of images, features, fonts, and colours to speak to people looking to live in the city. Use our suggestions as a base for your designer to work off of, or make change to guide your designer.</span></div>
 					<div class="image"><img src="assets/images/City.png"></div>
 					<div class="description">City</div>
 				</a>
@@ -107,6 +107,7 @@
         // Save tone when clicked
         $('.theme-boxes a').mousedown(function(){
             $.cookie('tone', $(this).find('.description').text());
+            $.cookie('tone_description', $(this).find('.theme-details span').text());
         });
 
         // Reset Function
@@ -114,6 +115,7 @@
 	        e.preventDefault();
             $.removeCookie('formData');
             $.removeCookie('tone');
+            $.removeCookie('tone_description');
             $.removeCookie('additional_comments');
             $.removeCookie('layout');
 	        alert('cookies reset');
