@@ -52,7 +52,7 @@
 
         // When colors are picked, setup palettes color1, color2 and etc
         $('[name="color"]').change(function(){
-            var colorOne = $(this).next();
+            var colorOne = $(this).next().find('span:nth-child(1)');
             var colorTwo = colorOne.next();
             var colorThree = colorTwo.next();
             var colorFour = colorThree.next();
