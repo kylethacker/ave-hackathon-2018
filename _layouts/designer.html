@@ -43,6 +43,7 @@
         };
         var blog_to_copy;
         var page_title;
+        var tagline;
         var font_json = {};
 
 
@@ -68,7 +69,7 @@
                     } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
                         color_json[name] = encodeURIComponent(value);
                         if ( name == 'color3' ) {
-                            color_json['color5'] = encodeURIComponent(value);
+                            color_json['color5'] = encodeURIComponent('#000000');
                         }
                         if ( name == 'color4' ) {
                             color_json['color6'] = encodeURIComponent(value);
@@ -111,6 +112,8 @@
                         blog_to_copy = value;
                     } else if ( name == 'page_title' ){
                         page_title = value;
+                    } else if ( name == 'biography' ){
+                        tagline = value;
                     }
                 }
             });
@@ -123,13 +126,13 @@
 
         features_json = JSON.stringify(features_json);
         color_json = JSON.stringify(color_json);
-        blog_to_copy = JSON.stringify(blog_to_copy);
         page_title = JSON.stringify(page_title);
+        tagline = JSON.stringify(tagline);
         font_json = JSON.stringify(font_json);
 
         console.log(generate_url);
 
-        var generate_url = 'http://avenuehq.test/wp-admin/admin-ajax.php?action=things&do=Q\\Sites\\hackSite&with[id]=23&with[base_palette]='+color_json+'&with[title]='+page_title+'&with[username]=michelle&with[email]=michelle@avenuehq.com&with[header_title]='+page_title+'&with[hack_features]=['+features_json+']&with[font_options]='+font_json;
+        var generate_url = 'http://avenuehq.test/wp-admin/admin-ajax.php?action=things&do=Q\\Sites\\hackSite&with[id]='+blog_to_copy+'&with[base_palette]='+color_json+'&with[title]='+page_title+'&with[username]=michelle&with[email]=michelle@avenuehq.com&with[header_title]='+page_title+'&with[header_tagline]='+tagline+'&with[hack_features]=['+features_json+']&with[font_options]='+font_json;
 
         $('.generate').attr('href', generate_url);
 

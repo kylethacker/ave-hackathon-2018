@@ -26,8 +26,6 @@
             $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
         }
 
-        console.log($.cookie('formData'));
-
         // Is there formData? Prefill the form!
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));

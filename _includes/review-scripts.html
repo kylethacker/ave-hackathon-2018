@@ -21,6 +21,7 @@
                             }
                         } else if ( name == 'photography-image' ) {
                             var photos = $('#photos').html();
+                            console.log(value);
                             $('#photos').html(photos+'<img src='+ value +' /><br/><br/>');
                         } else if ( name == 'custom_page_input' ){
                             var features =$('#features').html();
