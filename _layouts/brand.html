@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div id="sidebar">
-		<h1>Build your brand</h1>
+		<img src="assets/images/lifestyle.png">
 		<h2 class="tracker"></h2>
 		<span class="progress-bar">
       <span class="progress"></span>
@@ -29,10 +29,8 @@
 			<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>
 			<div class="block-content">
 				<form>
-					Page Title:<br>
 					<input type="text" name="Page Title" placeholder="Enter your page title"><br>
-					Biography<br>
-					<textarea rows="4" cols="50" placeholder="Enter your bio"></textarea>
+					<textarea id="bio" rows="4" cols="50" placeholder="Enter your bio"></textarea>
 				</form>
 			</div>
 		</section>
@@ -41,15 +39,95 @@
 			<h3>Colours</h3>
 			<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>
 			<div class="block-content">
+				<div class="color-row" id="one">
+					<span class="color-option">
+						<label>
+							<input type="radio" name="color" value="amazeballs">
+							<span data-hex="#111111">color1</span>
+							<span data-hex="#222222">color2</span>
+							<span data-hex="#333333">color3</span>
+							<span data-hex="#444444">color4</span>
+						</label>
+					</span>
+
+					<span class="color-option">
+						<label>
+							<input type="radio" name="color" value="amazeballs">
+							<span data-hex="#111111">color1</span>
+							<span data-hex="#222222">color2</span>
+							<span data-hex="#333333">color3</span>
+							<span data-hex="#444444">color4</span>
+						</label>
+					</span>
+
+
+					<span class="color-option">
+						<label>
+							<input type="radio" name="color" value="amazeballs">
+							<span data-hex="#111111">color1</span>
+							<span data-hex="#222222">color2</span>
+							<span data-hex="#333333">color3</span>
+							<span data-hex="#444444">color4</span>
+						</label>
+					</span>
+
+
 				<span class="color-option">
 					<label>
 						<input type="radio" name="color" value="amazeballs">
-						<span data-hex="GREEN">color1</span>
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
+					</label>
+				</span>		
+			</div>
+			<div class="color-row" id="two">
+
+				<span class="color-option">
+					<label>
+						<input type="radio" name="color" value="amazeballs">
+						<span data-hex="#111111">color1</span>
 						<span data-hex="#222222">color2</span>
 						<span data-hex="#333333">color3</span>
 						<span data-hex="#444444">color4</span>
 					</label>
 				</span>
+
+
+				<span class="color-option">
+					<label>
+						<input type="radio" name="color" value="amazeballs">
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
+					</label>
+				</span>
+
+
+				<span class="color-option">
+					<label>
+						<input type="radio" name="color" value="amazeballs">
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
+					</label>
+				</span>
+
+
+				<span class="color-option">
+					<label>
+						<input type="radio" name="color" value="amazeballs">
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
+					</label>
+				</span>
+			</div>
+
 			</div>
 		</section>
 		<script>
@@ -79,15 +157,15 @@
 				<div class="type-example">
 					<label>
 						<input type="radio" name="header-font" value="amazeballs" checked>
-						<span class="type-image" data-hex="Sans-Serif"><img src="assets/images/serif.svg"></span>
+						<span class="type-image" data-hex="Sans-Serif"><img src="assets/images/sans-serif.svg"></span>
 					</label>
-						<div class="type-label">Sans-Serif (Suggested)</div>
+						<div class="type-label">Sans-Serif</br> (Suggested)</div>
 				</div>
 
 				<div class="type-example">
 					<label>
 						<input type="radio" name="header-font" value="amazeballs">
-						<span class="type-image" data-hex="Script"><img src="assets/images/serif.svg"></span>
+						<span class="type-image" data-hex="Script"><img src="assets/images/script.svg"></span>
 					</label>
 						<div class="type-label">Script</div>
 				</div>
@@ -95,7 +173,7 @@
 				<div class="type-example">
 					<label>
 						<input type="radio" name="header-font" value="amazeballs">
-						<span class="type-image" data-hex="Slab-Serif"><img src="assets/images/serif.svg"></span>
+						<span class="type-image" data-hex="Slab-Serif"><img src="assets/images/slab-serif.svg"></span>
 					</label>
 						<div class="type-label">Slab Serif</div>
 				</div>
@@ -105,15 +183,15 @@
 				<div class="type-example">
 					<label>
 						<input type="radio" name="body-font" value="amazeballs" checked>
-						<span class="type-image" data-hex="Sans-Serif"><img src="assets/images/serif.svg"></span>
+						<span class="type-image" data-hex="Sans-Serif"><img src="assets/images/sans-serif-body.svg"></span>
 					</label>
-						<div class="type-label">Sans-Serif (Suggested)</div>
+						<div class="type-label">Sans-Serif </br>(Suggested)</div>
 				</div>
 
 				<div class="type-example">
 					<label>
 						<input type="radio" name="body-font" value="amazeballs">
-						<span class="type-image" data-hex="Serif"><img src="assets/images/serif.svg"></span>
+						<span class="type-image" data-hex="Serif"><img src="assets/images/serif-body.svg"></span>
 					</label>
 						<div class="type-label">Serif</div>
 				</div>
@@ -126,7 +204,40 @@
 			<h3>Photography</h3>
 			<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>
 			<div class="block-content">
-				Test
+				<div class="photography-example">
+					<label>
+						<input type="checkbox" name="photography-image" value="amazeballs">
+						<span class="photography-image"><img src="assets/images/lifestyle/1.png"></span>
+						<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+
+					</label>
+				</div>
+
+				<div class="photography-example">
+					<label>
+						<input type="checkbox" name="photography-image" value="amazeballs">
+						<span class="photography-image"><img src="assets/images/lifestyle/2.png"></span>
+						<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+					</label>
+				</div>
+				
+				<div class="photography-example">
+					<label>
+						<input type="checkbox" name="photography-image" value="amazeballs">
+						<span class="photography-image"><img src="assets/images/lifestyle/3.png"></span>
+						<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+
+					</label>
+				</div>
+
+				<div class="photography-example">
+					<label>
+						<input type="checkbox" name="photography-image" value="amazeballs">
+						<span class="photography-image"><img src="assets/images/lifestyle/4.png"></span>
+						<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+					</label>
+				</div>
+
 			</div>
 		</section>
 
@@ -137,23 +248,22 @@
 				<form>
 
 					<div class="col">
-						<input type="checkbox" name="gender" value="Lead Capture Bubble" checked> Lead Capture Bubble<br>
-						<input type="checkbox" name="gender" value="Buyers Guide" checked> Buyers Guide<br>
-						<input type="checkbox" name="gender" value="Sellers Guide" checked> Sellers Guide<br>
-						<input type="checkbox" name="gender" value="Testimonials" checked> Testimonials<br>
-						<input type="checkbox" name="gender" value="About Page" checked> About Page<br>
-						<input type="checkbox" name="gender" value="Video Header" checked> Video Header<br>
-						<input type="checkbox" name="gender" value="Home Finder" checked> Home Finder<br>
+						<label><input type="checkbox" name="gender" value="Lead Capture Bubble" checked> Lead Capture Bubble</label>
+						<label><input type="checkbox" name="gender" value="Buyers Guide" checked> Buyers Guide</label>
+						<label><input type="checkbox" name="gender" value="Sellers Guide" checked> Sellers Guide</label>
+						<label><input type="checkbox" name="gender" value="Testimonials" checked> Testimonials</label>
+						<label><input type="checkbox" name="gender" value="About Page" checked> About Page</label>
+						<label><input type="checkbox" name="gender" value="Video Header" checked> Video Header</label>
+						<label><input type="checkbox" name="gender" value="Home Finder" checked> Home Finder</label>
 					</div>
 					<div class="col">
-						<input type="checkbox" name="gender" value="Home Evaluation" checked> Home Evaluation<br>
-						<input type="checkbox" name="gender" value="Property Search" checked> Property Search<br>
-						<input type="checkbox" name="gender" value="Mortgage Calculator" checked> Mortgage Calculator<br>
-						<input type="checkbox" name="gender" value="Office Listings" checked> Office Listings<br>
-						<input type="checkbox" name="gender" value="Featured Listings" checked> Featured Listings<br>
-						<input type="checkbox" name="gender" value="other"> Custom Page<br>
-
-						<input type="text" name="custom_page" placeholder="Enter custom page name ..."><br>
+						<label><input type="checkbox" name="gender" value="Home Evaluation" checked> Home Evaluation</label>
+						<label><input type="checkbox" name="gender" value="Property Search" checked> Property Search</label>
+						<label><input type="checkbox" name="gender" value="Mortgage Calculator" checked> Mortgage Calculator</label>
+						<label><input type="checkbox" name="gender" value="Office Listings" checked> Office Listings</label>
+						<label><input type="checkbox" name="gender" value="Featured Listings" checked> Featured Listings</label>
+						<label><input type="checkbox" name="gender" value="other"> Custom Page</label>
+						<label><input type="text" name="custom_page" placeholder="Enter custom page name ..."></label>
 					</div>
 
 
@@ -165,7 +275,7 @@
 			<h3>Layout</h3>
 			<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>
 			<div class="block-content">
-				<a href="/layout">Layout</a>
+				<a href="/layout" class="layouts-btn">View Layouts</a>
 			</div>
 		</section>
 
