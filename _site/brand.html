@@ -228,7 +228,7 @@
 			<section id="block">
 				<h3>Photography</h3>
 				<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>
-				<div class="block-content">
+				<div class="block-content photos">
 					<div class="photography-example">
 						<label>
 							<input type="checkbox" name="photography-image" value="amazeballs">
@@ -262,7 +262,7 @@
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 						</label>
 					</div>
-
+					<p class="max-reached">NO</p>
 				</div>
 			</section>
 
@@ -306,6 +306,7 @@
 				</div>
 			</section>
 
+			<input type="hidden" name="photography_chosen" value="">
 			<input type="hidden" name="exclude_features" value="">
 			<input type="hidden" name="layout_type" value="">
 			<input type="hidden" name="visual_tone" value="">
@@ -389,8 +390,39 @@
             }
         });
 
+        // Limit photos chosen to THREE
+        $('.photography-example label').change(function(e){
+            var photo_count = $('.photos').find('[name=photography-image]:checked').length;
+
+            // progress tracker
+            if ( photo_count > 0 ) {
+                $('[name="photography_chosen"]').val(1).trigger('change');
+            } else {
+                $('[name="photography_chosen"]').val('').trigger('change');
+            }
+
+            // if there are less than three photos, allow clicking
+            if ( photo_count == 2 ) {
+                $('.photography-example').removeAttr('style');
+                $('.photos .max-reached').hide();
+            }
+        }).mousedown(function(e){
+            var photo_count = $('.photos').find('[name=photography-image]:checked').length;
+
+            // disable if max reached
+            if ( photo_count > 2 ) {
+                $('.photos')
+	                .find('[name=photography-image]:not(:checked)').parent().parent() //.photography-example
+	                .css('pointer-events', 'none');
+                $('.photos .max-reached').show();
+            } else {
+                $('.photography-example').removeAttr('style');
+                $('.photos .max-reached').hide();
+            }
+        });
+
         // Progress checker
-        var progressFields = $('[name="page_title"], [name="biography"], [name="color1"], [name="layout_type"]');
+        var progressFields = $('[name="page_title"], [name="biography"], [name="color1"], [name="layout_type"], [name="photography_chosen"]');
         var total = progressFields.length;
         var progress = 0;
         var percent;

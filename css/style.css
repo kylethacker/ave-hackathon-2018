@@ -343,6 +343,10 @@ input[type="text"],
 
 }
 
+.max-reached {
+    display: none;
+}
+
 .theme-details{
     opacity:0;
     position: absolute;
