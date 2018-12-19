@@ -40,7 +40,7 @@
 		<!--REVIEW CONTENT-->
 <section id="review">
 	<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
-	<span class="field">Layout Type</span><span class="value"><span id="layout_type"></span><img id="wireframe" src=""></span>
+	<span class="field">Layout Type</span><span class="value"><img id="wireframe" width="188px;" src=""><span id="layout_type"></span></span>
 	<span class="field">Page Title</span><span id="page_title" class="value"></span>
 	<span class="field">Biography</span><span id="biography" class="value"></span>
 	<span class="field">Color Palette</span>
@@ -59,6 +59,7 @@
 	<span class="field">Body Font</span><span id="body-font" class="value"></span>
 	<span class="field">Features</span><span id="features" class="value"></span>
 	<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
+	<span class="field">Photography</span><span id="photos" class="value"></span>
 </section>
 		<section id="block">
 			<h3>Notes from the client</h3>
@@ -89,6 +90,7 @@
         // Spit out formData into Review Content section!
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));
+            console.log(formData);
 
             $.each(formData, function(i){
                 $.each(formData[i], function(key, value){
@@ -103,6 +105,9 @@
                             } else {
                                 $('#'+name).html(features +value+ '<br/>')
                             }
+                        } else if ( name == 'photography-image' ) {
+                            var photos = $('#photos').html();
+                            $('#photos').html(photos+'<img src='+ value +' /><br/><br/>');
                         } else if ( name == 'custom_page_input' ){
                             var features =$('#features').html();
                             features = features + value;
