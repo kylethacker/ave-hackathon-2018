@@ -13,7 +13,7 @@
 	<div id="content">
 		<h3>Branding Review</h3>
 		<section id="review">
-			<span class="field">Visual Style</span><span id="visual_tone" class="value"></span>
+			<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
 			<span class="field">Page Title</span><span id="page_title" class="value"></span>
 			<span class="field">Biography</span><span id="biography" class="value"></span>
 			<span class="field">Color Palette</span><span id="color" class="value"></span>
@@ -69,6 +69,8 @@
                             var features =$('#features').html();
                             features = features + value;
                             $('#features').html(features);
+                        } else if ( name == 'visual_tone' ){
+                            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
                         } else if ( name == 'exclude_features' ){
                             var features =$('#features').html();
                             var removed_values = value.split(',');
