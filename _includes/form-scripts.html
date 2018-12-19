@@ -16,6 +16,10 @@
             });
         }
 
+        if ( $.cookie('tone_description') ) {
+            $('#brandTitle').next().text($.cookie('tone_description'));
+        }
+
         // Check them cookies
         if ( $.cookie('layout') ) {
             $('.layout-btn').text('Reselect Layout').attr('href', '/layout-'+$.cookie('layout'));

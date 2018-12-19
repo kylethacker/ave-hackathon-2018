@@ -31,7 +31,7 @@
 	
 					<div class="theme-details">
 						<h4>Lifestyle</h4>	
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>TESTHere are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
 					<div class="image"><img src="assets/images/Lifestyle.png"></div>
 					<div class="description">Lifestyle</div>
 				</a>
@@ -40,7 +40,7 @@
 				<a href="/brand">		
 					<div class="theme-details">
 						<h4>Modern</h4>
-						<span>Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
+						<span>TEST2Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.</span></div>
 					<div class="image"><img src="assets/images/Modern.png"></div>
 					<div class="description">Modern</div>
 				</a>
@@ -84,6 +84,7 @@
         // Save tone when clicked
         $('.theme-boxes a').mousedown(function(){
             $.cookie('tone', $(this).find('.description').text());
+            $.cookie('tone_description', $(this).find('.theme-details span').text());
         });
 
         // Reset Function
@@ -91,6 +92,7 @@
 	        e.preventDefault();
             $.removeCookie('formData');
             $.removeCookie('tone');
+            $.removeCookie('tone_description');
             $.removeCookie('additional_comments');
             $.removeCookie('layout');
 	        alert('cookies reset');
