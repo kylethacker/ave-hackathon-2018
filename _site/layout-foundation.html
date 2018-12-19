@@ -79,5 +79,14 @@
         $.cookie('layout', 'Foundation');
     })(jQuery);
 </script>
+<script>
+    (function ($) {
+
+        if ( $('#preview .back').length ) {
+            $('#preview .back').attr('href', '/brand-'+$.cookie('tone').toLowerCase()+'#layout');
+        }
+
+    })(jQuery);
+</script>
 </html>
 

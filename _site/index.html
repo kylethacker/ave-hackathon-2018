@@ -37,7 +37,7 @@
 	<div id="content">
 		<div class="theme-boxes">
 			<div class="box">
-				<a href="/brand">
+				<a href="/brand-interior">
 					<div class="theme-details">
 						<h4>Interior</h4>
 						<span>Looking for a website that focuses on sharing beautiful homes and interiors? We've crafted a unique selection of fonts, colours, images, and features that are optimized to reach your audience. Use our suggestions as a base for your designer to work off of, or make change to guide your designer.</span>
@@ -60,7 +60,7 @@
 				</a>
 			</div>
 			<div class="box">
-				<a href="/brand">		
+				<a href="/brand-modern">
 					<div class="theme-details">
 						<h4>Modern</h4>
 						<span>If you’re a real estate professional looking to showcase your modern take on real estate, our Modern style will help you stand out online. We've crafted a unique selection of fonts, colours, images, and features that are optimized to reach your audience. Use our suggestions as a base for your designer to work off of, or make change to guide your designer.</span></div>
@@ -120,6 +120,15 @@
             $.removeCookie('layout');
 	        alert('cookies reset');
 	    });
+
+    })(jQuery);
+</script>
+<script>
+    (function ($) {
+
+        if ( $('#preview .back').length ) {
+            $('#preview .back').attr('href', '/brand-'+$.cookie('tone').toLowerCase()+'#layout');
+        }
 
     })(jQuery);
 </script>

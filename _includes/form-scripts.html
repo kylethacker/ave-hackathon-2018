@@ -2,18 +2,21 @@
 <script>
     (function ($) {
 
+        $('#preview .back').attr('href', '/brand-'+$.cookie('tone').toLowerCase()+'#layout');
+
         // Set up poster for visual tone
         if ( $.cookie('tone') ) {
             $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
             $('#brandTitle').text($.cookie('tone'));
-            $('[name=photography-image]').each(function(){
-               var folder = $('[name=photography-image]').val().replace('photo_folder', $.cookie('tone'));
-               $(this).val(folder);
-            });
-            $('.photography-image img').each(function(){
-               var folder = $(this).attr('src').replace('photo_folder', $.cookie('tone'));
-               $(this).attr('src', folder);
-            });
+//            $('[name=photography-image]').each(function(){
+//               var folder = $('[name=photography-image]').val().replace('photo_folder', $.cookie('tone'));
+//               $(this).val(folder);
+//               $(this).trigger('change');
+//            });
+//            $('.photography-image img').each(function(){
+//               var folder = $(this).attr('src').replace('photo_folder', $.cookie('tone'));
+//               $(this).attr('src', folder);
+//            });
         }
 
         if ( $.cookie('tone_description') ) {
