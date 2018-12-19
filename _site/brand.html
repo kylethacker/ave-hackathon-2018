@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-	<title>Your awesome title | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
-	<meta name="generator" content="Jekyll v3.8.5" />
-	<meta property="og:title" content="Your awesome title" />
-	<meta property="og:locale" content="en_US" />
-	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-	<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-	<link rel="canonical" href="http://localhost:4000/" />
-	<meta property="og:url" content="http://localhost:4000/" />
-	<meta property="og:site_name" content="Your awesome title" />
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Super amazing app by Kyle, Nick, Rob, Jake and Michelle, please give us all the trophies and stickers." />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<link rel="canonical" href="http://localhost:4000/brand.html">
+
+	<title>Brand yo-self </title>
 
 	<link rel="stylesheet" href="/assets/main.css">
 	<link rel="stylesheet" href="/css/style.css">
-	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
+
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -29,7 +27,7 @@
 <div class="container">
 
 	<div id="sidebar">
-		<img src="assets/images/lifestyle.png">
+		<img id="poster" src="">
 		<h2 class="tracker"></h2>
 		<span class="progress-bar"><span class="progress"></span></span>
 		<div class="description">Here are some starting themes to pick from, once you’ve selected one we’ll dig into the
@@ -43,7 +41,7 @@
 	<div id="content">
 		<form id="brandForm">
 		<section class="intro">
-			<h2>Lifestyle</h2>
+			<h2 id="brandTitle">Lifestyle</h2>
 			<p>Bender, quit destroying the universe! Professor, make a woman out of me. And so we say goodbye to our beloved pet, Nibbler, who's gone to a place where I, too, hope one day to go. The toilet. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.</p>
 		</section>
 
@@ -315,6 +313,12 @@
 <script>
     (function ($) {
 
+        // Set up poster for visual tone
+	    if ( $.cookie('tone') ) {
+            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+            $('#brandTitle').text($.cookie('tone'));
+	    }
+
         // Check them cookies
         if ( $.cookie('layout') ) {
             $('.layout-btn').text('Reselect Layout');
@@ -448,15 +452,6 @@
 
             $.cookie('formData', JSON.stringify($('#brandForm').serializeArray()));
         });
-
-    })(jQuery);
-</script>
-
-
-<script>
-    (function ($) {
-
-
 
     })(jQuery);
 </script>

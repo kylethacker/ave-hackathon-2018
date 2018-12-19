@@ -4,7 +4,7 @@
 <div class="container">
 
 	<div id="sidebar">
-		<img src="assets/images/lifestyle.png">
+		<img id="poster" src="">
 		<h2 class="tracker"></h2>
 		<span class="progress-bar"><span class="progress"></span></span>
 		<div class="description">Here are some starting themes to pick from, once you’ve selected one we’ll dig into the
@@ -18,7 +18,7 @@
 	<div id="content">
 		<form id="brandForm">
 		<section class="intro">
-			<h2>Lifestyle</h2>
+			<h2 id="brandTitle">Lifestyle</h2>
 			<p>Bender, quit destroying the universe! Professor, make a woman out of me. And so we say goodbye to our beloved pet, Nibbler, who's gone to a place where I, too, hope one day to go. The toilet. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.</p>
 		</section>
 
@@ -289,6 +289,12 @@
 <!--FORM HELPER-->
 <script>
     (function ($) {
+
+        // Set up poster for visual tone
+	    if ( $.cookie('tone') ) {
+            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+            $('#brandTitle').text($.cookie('tone'));
+	    }
 
         // Check them cookies
         if ( $.cookie('layout') ) {

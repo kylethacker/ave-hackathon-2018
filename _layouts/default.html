@@ -64,16 +64,15 @@
 </div>
 </body>
 
-
-
-<!--FORM HELPER-->
 <script>
     (function ($) {
 
+        // Save tone when clicked
         $('.theme-boxes a').mousedown(function(){
             $.cookie('tone', $(this).find('.description').text());
         });
 
+        // Reset Function
 	    $('#resetData').click(function(e){
 	        e.preventDefault();
             $.removeCookie('formData');

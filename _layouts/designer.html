@@ -36,15 +36,16 @@
 </div>
 
 </body>
-<!--FORM HELPER-->
+
 <script>
     (function ($) {
 
+        // If there is extra comments, show them
         if ( $.cookie('additional_comments' ) ) {
             $('#other').text($.cookie('additional_comments' ))
         }
 
-        // UndoSerializeArray
+        // Spit out formData
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));
 
