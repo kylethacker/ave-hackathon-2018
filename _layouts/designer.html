@@ -8,7 +8,7 @@
 		<div class="description">Hi Rob, here are the details that the client has submitted regarding how they would to brand and personalize their website.</div>
 		<div class="description">If you're ready to build, click the button below and you'll be redirected to the client's newly generated site, with all of the necessary details pulled in</div>
 
-		<a href="#" id="button" class="back">Generate Template</a>
+		<a href="#" id="button" class="back generate">Generate Template</a>
 
 	</div>
 
@@ -37,20 +37,15 @@
         var formData = JSON.parse($.cookie('formData'));
 
         var features_json = {};
-        var color_json = {};
-        var layout_json;
+        var color_json = {
+            "white" : encodeURIComponent('#FFFFFF'),
+            "black" : encodeURIComponent('#000000')
+        };
+        var blog_to_copy;
+        var page_title;
+        var font_json = {};
 
-        //layout
-	    //fonts
-//    *Header Copy*
-//        Sans-serif: Montserrat
-//        Serif: Playfair Display
-//        Slab-Serif: Arvo
-//        Script: Dancing Script
-//
-//        *Body Copy*
-//        Sans-serif: Open Sans
-//        Serif: Noto Serif
+
         //grab data from formData
         $.each(formData, function(i){
             $.each(formData[i], function(key, value){
@@ -70,24 +65,77 @@
                         $('#features').html(features);
                     } else if ( name == 'visual_tone' ){
                         $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
-                    } else if ( name == 'layout_type' ){
-                        layout_json = value.toLowerCase();
                     } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
-                        color_json[name] = value;
+                        color_json[name] = encodeURIComponent(value);
+                        if ( name == 'color3' ) {
+                            color_json['color5'] = encodeURIComponent(value);
+                        }
+                        if ( name == 'color4' ) {
+                            color_json['color6'] = encodeURIComponent(value);
+                        }
+                    } else if ( name == 'header-font' ){
+                        if ( value == 'sans-serif') {
+                            value = 'Montserrat';
+                        }
+                        if ( value == 'serif') {
+                            value = 'Playfair Display';
+                        }
+                        if ( value == 'slab-serif') {
+                            value = 'Arvo';
+                        }
+                        if ( value == 'script') {
+                            value = 'Dancing Script';
+                        }
+                        font_json['title'] = value;
+                    } else if ( name == 'body-font' ){
+                        if ( value == 'sans-serif') {
+                            value = 'Open Sans';
+                        }
+                        if ( value == 'serif') {
+                            value = 'Source Serif Pro';
+                        }
+                        font_json['body'] = value;
+                    } else if ( name == 'layout_type' ){
+                        if ( value == 'Clearsky') {
+                            value = '1646';
+                        }
+                        if ( value == 'Foundation') {
+                            value = '1648';
+                        }
+                        if ( value == 'Inspire') {
+                            value = '1651';
+                        }
+                        if ( value == 'Bloom') {
+                            value = '1647';
+                        }
+                        blog_to_copy = value;
+                    } else if ( name == 'page_title' ){
+                        page_title = value;
                     }
                 }
             });
         });
 
 // {"white":"%23333333","black":"%23CCCCCC","color1":"%2FF333DD","color2":"%23DD00FF","color3":"%23DDFFDD","color4":"%23DDFFDD","color5":"%23DDDDFF","color6":"%23FF00DD"}
-
+//        {"title": "Playfair Display", "body": "Dancing Script"}
 
 	    //url encode!!!!!!!!!
 
-        console.log(JSON.stringify(features_json));
-        console.log(JSON.stringify(color_json));
-        console.log(JSON.stringify(layout_json));
+        features_json = JSON.stringify(features_json);
+        color_json = JSON.stringify(color_json);
+        blog_to_copy = JSON.stringify(blog_to_copy);
+        page_title = JSON.stringify(page_title);
+        font_json = JSON.stringify(font_json);
 
+        console.log(generate_url);
+
+        var generate_url = 'http://avenuehq.test/wp-admin/admin-ajax.php?action=things&do=Q\\Sites\\hackSite&with[id]=23&with[base_palette]='+color_json+'&with[title]='+page_title+'&with[username]=michelle&with[email]=michelle@avenuehq.com&with[header_title]='+page_title+'&with[hack_features]=['+features_json+']&with[font_options]='+font_json;
+
+        $('.generate').attr('href', generate_url);
+
+
+
+        console.log(generate_url);
 
     })(jQuery);
 </script>

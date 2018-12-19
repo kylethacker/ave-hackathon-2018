@@ -5,8 +5,7 @@
         // Spit out formData into Review Content section!
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));
-            console.log(formData);
-
+            
             $.each(formData, function(i){
                 $.each(formData[i], function(key, value){
                     if ( key == "name" ) {
