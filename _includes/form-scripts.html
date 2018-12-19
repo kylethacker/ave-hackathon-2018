@@ -22,7 +22,7 @@
 
         // Check them cookies
         if ( $.cookie('layout') ) {
-            $('.layout-btn').text('Reselect Layout').attr('href', '/layout-'+$.cookie('layout'));
+            $('.layout-btn').text('Reselect Layout').attr('href', '/layout-'+$.cookie('layout').toLowerCase);
             $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
         }
 
