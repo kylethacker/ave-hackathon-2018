@@ -35,9 +35,22 @@
 
         //jey them dataz redy for jaky boy
         var formData = JSON.parse($.cookie('formData'));
+
         var features_json = {};
         var color_json = {};
+        var layout_json;
 
+        //layout
+	    //fonts
+//    *Header Copy*
+//        Sans-serif: Montserrat
+//        Serif: Playfair Display
+//        Slab-Serif: Arvo
+//        Script: Dancing Script
+//
+//        *Body Copy*
+//        Sans-serif: Open Sans
+//        Serif: Noto Serif
         //grab data from formData
         $.each(formData, function(i){
             $.each(formData[i], function(key, value){
@@ -58,31 +71,22 @@
                     } else if ( name == 'visual_tone' ){
                         $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
                     } else if ( name == 'layout_type' ){
-                        $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
-                        $('#layout_type').text($.cookie('layout'));
-                    } else if ( name == 'exclude_features' ){
-                        var features =$('#features').html();
-                        var removed_values = value.split(',');
-                        $.each(removed_values, function(i){
-                            features = features.replace(removed_values[i]+"<br>", '');
-                        });
-                        $('#features').html(features);
-                        value = value.replace(/\,/g,'<br/>');
-                        $('#'+name).html(value);
+                        layout_json = value.toLowerCase();
                     } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
                         color_json[name] = value;
-                    } else {
-                        $('#'+name).text(value);
                     }
                 }
             });
         });
 
 // {"white":"%23333333","black":"%23CCCCCC","color1":"%2FF333DD","color2":"%23DD00FF","color3":"%23DDFFDD","color4":"%23DDFFDD","color5":"%23DDDDFF","color6":"%23FF00DD"}
-	    //url encode
+
+
+	    //url encode!!!!!!!!!
 
         console.log(JSON.stringify(features_json));
         console.log(JSON.stringify(color_json));
+        console.log(JSON.stringify(layout_json));
 
 
     })(jQuery);
