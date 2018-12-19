@@ -5,6 +5,7 @@
         // Spit out formData into Review Content section!
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));
+            console.log(formData);
 
             $.each(formData, function(i){
                 $.each(formData[i], function(key, value){
@@ -19,6 +20,9 @@
                             } else {
                                 $('#'+name).html(features +value+ '<br/>')
                             }
+                        } else if ( name == 'photography-image' ) {
+                            var photos = $('#photos').html();
+                            $('#photos').html(photos+'<img src='+ value +' /><br/><br/>');
                         } else if ( name == 'custom_page_input' ){
                             var features =$('#features').html();
                             features = features + value;
