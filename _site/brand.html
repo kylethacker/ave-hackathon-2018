@@ -63,7 +63,7 @@
 				<div class="color-row" id="one">
 					<span class="color-option">
 						<label>
-							<input type="radio" name="color" value="amazeballs">
+							<input type="radio" name="color" value="amazeballs1">
 							<span data-hex="#111111">color1</span>
 							<span data-hex="#222222">color2</span>
 							<span data-hex="#333333">color3</span>
@@ -73,7 +73,7 @@
 
 					<span class="color-option">
 						<label>
-							<input type="radio" name="color" value="amazeballs">
+							<input type="radio" name="color" value="amazeballs2">
 							<span data-hex="#111111">color1</span>
 							<span data-hex="#222222">color2</span>
 							<span data-hex="#333333">color3</span>
@@ -84,7 +84,7 @@
 
 					<span class="color-option">
 						<label>
-							<input type="radio" name="color" value="amazeballs">
+							<input type="radio" name="color" value="amazeballs3">
 							<span data-hex="#111111">color1</span>
 							<span data-hex="#222222">color2</span>
 							<span data-hex="#333333">color3</span>
@@ -95,7 +95,7 @@
 
 				<span class="color-option">
 					<label>
-						<input type="radio" name="color" value="amazeballs">
+						<input type="radio" name="color" value="amazeballs4">
 						<span data-hex="#111111">color1</span>
 						<span data-hex="#222222">color2</span>
 						<span data-hex="#333333">color3</span>
@@ -107,7 +107,7 @@
 
 				<span class="color-option">
 					<label>
-						<input type="radio" name="color" value="amazeballs">
+						<input type="radio" name="color" value="amazeballs5">
 						<span data-hex="#111111">color1</span>
 						<span data-hex="#222222">color2</span>
 						<span data-hex="#333333">color3</span>
@@ -118,7 +118,7 @@
 
 				<span class="color-option">
 					<label>
-						<input type="radio" name="color" value="amazeballs">
+						<input type="radio" name="color" value="amazeballs6">
 						<span data-hex="#111111">color1</span>
 						<span data-hex="#222222">color2</span>
 						<span data-hex="#333333">color3</span>
@@ -129,7 +129,7 @@
 
 				<span class="color-option">
 					<label>
-						<input type="radio" name="color" value="amazeballs">
+						<input type="radio" name="color" value="amazeballs7">
 						<span data-hex="#111111">color1</span>
 						<span data-hex="#222222">color2</span>
 						<span data-hex="#333333">color3</span>
@@ -140,7 +140,7 @@
 
 				<span class="color-option">
 					<label>
-						<input type="radio" name="color" value="amazeballs">
+						<input type="radio" name="color" value="amazeballs8">
 						<span data-hex="#111111">color1</span>
 						<span data-hex="#222222">color2</span>
 						<span data-hex="#333333">color3</span>
@@ -317,10 +317,13 @@
 
         // Check them cookies
         $('[name=visual_tone]').val($.cookie('tone'));
+        $('[name="layout_type"]').val($.cookie('layout'));
+
+        console.log($.cookie('tone'));
+        console.log($.cookie('layout'));
 
         if ( $.cookie('layout') ) {
             $('.layout-btn').text('Reselect Layout');
-            $('[name=layout_type]').val($.cookie('layout'));
             $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
         }
 
@@ -339,6 +342,12 @@
                             $('[name='+name+'][value="'+value+'"]').trigger('click');
                         } else if ( name == 'custom_page_input' ) {
                             $('[name='+name+']').show().val(value);
+                        } else if ( name == 'layout_type' ) {
+                            if ( value ) {
+                                $('[name='+name+']').val(value);
+                            } else {
+                                $('[name='+name+']').val($.cookie('layout'));
+                            }
                         } else {
                             $('[name='+name+']').val(value);
                         }

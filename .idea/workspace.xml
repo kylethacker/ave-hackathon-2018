@@ -2,62 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b9bdffa-f7e2-4eda-9309-23882e2c3c41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Layouts/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Layouts/Bloom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Layouts/Clearsky-Full.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Layouts/Foundation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Lifestyle/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Lifestyle/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Lifestyle/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Lifestyle/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Lifestyle/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Layouts/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Layouts/Bloom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Layouts/Clearsky-Full.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Layouts/Foundation.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Lifestyle/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Lifestyle/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Lifestyle/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Lifestyle/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Lifestyle/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Checkmark-Outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Checkmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Paintbucket.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Sans-Serif-Body.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Sans-Serif.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Script.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Serif-Body.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_site/assets/images/Slab-Serif.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Checkmark-Outline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Checkmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Paintbucket.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Sans-Serif-Body.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Sans-Serif.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Script.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Serif-Body.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Slab-Serif.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/layout-options.html" afterPath="$PROJECT_DIR$/_includes/layout-options.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/brand.html" afterPath="$PROJECT_DIR$/_layouts/brand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/layout-clearsky.html" afterPath="$PROJECT_DIR$/_layouts/layout-clearsky.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/review.html" afterPath="$PROJECT_DIR$/_layouts/review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/404.html" afterPath="$PROJECT_DIR$/_site/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/assets/images/Serif.svg" afterPath="$PROJECT_DIR$/_site/assets/images/Serif.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/brand.html" afterPath="$PROJECT_DIR$/_site/brand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2018/12/18/welcome-to-jekyll.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2018/12/18/welcome-to-jekyll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/layout-bloom.html" afterPath="$PROJECT_DIR$/_site/layout-bloom.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/layout-clearsky.html" afterPath="$PROJECT_DIR$/_site/layout-clearsky.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/layout-foundation.html" afterPath="$PROJECT_DIR$/_site/layout-foundation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/layout-inspire.html" afterPath="$PROJECT_DIR$/_site/layout-inspire.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/layout.html" afterPath="$PROJECT_DIR$/_site/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/review.html" afterPath="$PROJECT_DIR$/_site/review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Serif.svg" afterPath="$PROJECT_DIR$/assets/images/Serif.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,8 +61,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="397" column="1" lean-forward="false" selection-start-line="397" selection-start-column="1" selection-end-line="397" selection-end-column="1" />
+            <state relative-caret-position="323">
+              <caret line="369" column="23" lean-forward="false" selection-start-line="369" selection-start-column="23" selection-end-line="369" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -123,8 +71,9 @@
       <file leaf-file-name="brand.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="421" column="0" lean-forward="false" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="0" />
+            <state relative-caret-position="821">
+              <caret line="321" column="52" lean-forward="false" selection-start-line="321" selection-start-column="52" selection-end-line="321" selection-end-column="52" />
+              <caret line="323" column="52" lean-forward="false" selection-start-line="323" selection-start-column="52" selection-end-line="323" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -186,9 +135,10 @@
       <find>&lt;form&gt;</find>
       <find>&lt;/form&gt;</find>
       <find>&lt;form</find>
-      <find>exclude_features</find>
       <find>features</find>
+      <find>color-option</find>
       <find>layout_type</find>
+      <find>exclude_features</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -222,10 +172,10 @@
         <option value="$PROJECT_DIR$/_layouts/layout-bloom.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/_site/brand.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/_includes/layout-options.html" />
         <option value="$PROJECT_DIR$/_layouts/layout-clearsky.html" />
         <option value="$PROJECT_DIR$/_layouts/review.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/_layouts/brand.html" />
       </list>
     </option>
@@ -335,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16737000" />
+    <option name="totallyTimeSpent" value="17773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -698,14 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/layout-bloom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="948">
@@ -722,26 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="397" column="1" lean-forward="false" selection-start-line="397" selection-start-column="1" selection-end-line="397" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/layout-clearsky.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -754,10 +680,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/layout-clearsky.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="369" column="23" lean-forward="false" selection-start-line="369" selection-start-column="23" selection-end-line="369" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/layout-bloom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="421" column="0" lean-forward="false" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="0" />
+        <state relative-caret-position="821">
+          <caret line="321" column="52" lean-forward="false" selection-start-line="321" selection-start-column="52" selection-end-line="321" selection-end-column="52" />
+          <caret line="323" column="52" lean-forward="false" selection-start-line="323" selection-start-column="52" selection-end-line="323" selection-end-column="52" />
           <folding />
         </state>
       </provider>
