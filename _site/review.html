@@ -35,17 +35,29 @@
 	</div>
 	<div id="content">
 		<h3>Branding Review</h3>
-		<section id="review">
-			<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
-			<span class="field">Layout Type</span><span id="layout_type" class="value"><img id="wireframe" src=""></span>
-			<span class="field">Page Title</span><span id="page_title" class="value"></span>
-			<span class="field">Biography</span><span id="biography" class="value"></span>
-			<span class="field">Color Palette</span><span id="color" class="value"></span>
-			<span class="field">Header Font</span><span id="header-font" class="value"></span>
-			<span class="field">Body Font</span><span id="body-font" class="value"></span>
-			<span class="field">Features</span><span id="features" class="value"></span>
-			<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
-		</section>
+		<!--REVIEW CONTENT-->
+<section id="review">
+	<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
+	<span class="field">Layout Type</span><span id="layout_type" class="value"><img id="wireframe" src=""><span></span></span>
+	<span class="field">Page Title</span><span id="page_title" class="value"></span>
+	<span class="field">Biography</span><span id="biography" class="value"></span>
+	<span class="field">Color Palette</span>
+	<span class="value">
+				<div id="colorOptions">
+					<span class="color-option">
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
+					</span>
+				</div>
+				<div id="color"></div>
+			</span>
+	<span class="field">Header Font</span><span id="header-font" class="value"></span>
+	<span class="field">Body Font</span><span id="body-font" class="value"></span>
+	<span class="field">Features</span><span id="features" class="value"></span>
+	<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
+</section>
 		<section id="block">
 			<h3>Additional comments</h3>
 			<p>Please enter any other comments that you would like to forward to your designer</p>
@@ -71,7 +83,13 @@
             $('[name=additional_comments]').text($.cookie('additional_comments' ))
         }
 
-        // Spit out form Data
+    })(jQuery);
+</script>
+<!--REVIEW SCRIPTS-->
+<script>
+    (function ($) {
+
+        // Spit out formData into Review Content section!
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));
 
@@ -96,6 +114,7 @@
                             $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
                         } else if ( name == 'layout_type' ){
                             $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
+                            $('#wireframe').next().text($.cookie('layout'));
                         } else if ( name == 'exclude_features' ){
                             var features =$('#features').html();
                             var removed_values = value.split(',');
@@ -104,7 +123,11 @@
                             });
                             $('#features').html(features);
                             value = value.replace(/\,/g,'<br/>');
-	                        $('#'+name).html(value);
+                            $('#'+name).html(value);
+                        } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
+                            var color_num = name.replace('color', '');
+                            $('#colorOptions .color-option:nth-child('+color_num+')').attr('data-hex');
+                            $('#'+name).html(value);
                         } else {
                             $('#'+name).text(value);
                         }
@@ -112,6 +135,11 @@
                 });
             });
 
+            // Color Hex Helper
+            $('[data-hex]').each(function () {
+                var color = $(this).attr('data-hex');
+                $(this).css('background-color', color);
+            });
         }
 
     })(jQuery);

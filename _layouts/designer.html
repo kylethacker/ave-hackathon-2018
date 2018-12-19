@@ -8,25 +8,13 @@
 		<div class="description">Hi Rob, here are the details that the client has submitted regarding how they would to brand and personalize their website.</div>
 		<div class="description">If you're ready to build, click the button below and you'll be redirected to the client's newly generated site, with all of the necessary details pulled in</div>
 
-
 		<a href="#" id="button" class="back">Generate Template</a>
 
 	</div>
 
 	<div id="content">
 		<h3>Branding Review</h3>
-		<section id="review">
-			<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
-			<span class="field">Layout Type</span><span id="layout_type" class="value"><img id="wireframe" src=""></span>
-			<span class="field">Page Title</span><span id="page_title" class="value"></span>
-			<span class="field">Biography</span><span id="biography" class="value"></span>
-			<span class="field">Color Palette</span><span id="color" class="value"></span>
-			<span class="field">Header Font</span><span id="header-font" class="value"></span>
-			<span class="field">Body Font</span><span id="body-font" class="value"></span>
-			<span class="field">Features</span><span id="features" class="value"></span>
-			<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
-		</section>
-
+		{% include review-content.html %}
 		<section id="block">
 			<h3>Notes from the client</h3>
 			<span id="other"></span>
@@ -45,49 +33,7 @@
             $('#other').text($.cookie('additional_comments' ))
         }
 
-        // Spit out formData
-        if ( $.cookie('formData') ) {
-            var formData = JSON.parse($.cookie('formData'));
-
-            $.each(formData, function(i){
-                $.each(formData[i], function(key, value){
-                    if ( key == "name" ) {
-                        name = value;
-                    }
-                    if ( key == "value" ) {
-                        if ( name == 'features' ) {
-                            var features = $('#'+name).html();
-                            if ( ! features ) {
-                                $('#'+name).html(value + '<br/>')
-                            } else {
-                                $('#'+name).html(features +value+ '<br/>')
-                            }
-                        } else if ( name == 'custom_page_input' ){
-                            var features =$('#features').html();
-                            features = features + value;
-                            $('#features').html(features);
-                        } else if ( name == 'visual_tone' ){
-                            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
-                        } else if ( name == 'layout_type' ){
-                            $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
-                        } else if ( name == 'exclude_features' ){
-                            var features =$('#features').html();
-                            var removed_values = value.split(',');
-                            $.each(removed_values, function(i){
-                                features = features.replace(removed_values[i]+"<br>", '');
-                            });
-                            $('#features').html(features);
-                            value = value.replace(/\,/g,'<br/>');
-                            $('#'+name).html(value);
-                        } else {
-                            $('#'+name).text(value);
-                        }
-                    }
-                });
-            });
-
-        }
-
     })(jQuery);
 </script>
+{% include review-scripts.html %}
 {% include footer.html %}
