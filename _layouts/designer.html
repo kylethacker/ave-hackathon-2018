@@ -66,7 +66,7 @@
                         $('#features').html(features);
                     } else if ( name == 'visual_tone' ){
                         $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
-                    } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
+                    } else if ( name == 'color1' || name == 'color2'  || name == 'color3' ){
                         color_json[name] = encodeURIComponent(value);
                         if ( name == 'color3' ) {
                             color_json['color5'] = encodeURIComponent('#000000');
