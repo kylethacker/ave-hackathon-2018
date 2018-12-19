@@ -88,13 +88,13 @@
                             $('#features').html(features);
                         } else if ( name == 'exclude_features' ){
                             var features =$('#features').html();
-                            console.log(value);
-                            value = value.split(',');
-                            $.each(value, function(i){
-                                features = features.replace(value[i]+"<br>", '');
+                            var removed_values = value.split(',');
+                            $.each(removed_values, function(i){
+                                features = features.replace(removed_values[i]+"<br>", '');
                             });
                             $('#features').html(features);
-                            $('#'+name).text(value);
+                            value = value.replace(/\,/g,'<br/>');
+	                        $('#'+name).html(value);
                         } else {
                             $('#'+name).text(value);
                         }
