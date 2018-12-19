@@ -14,6 +14,8 @@
             $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
         }
 
+        console.log($.cookie('formData'));
+
         // Is there formData? Prefill the form!
         if ( $.cookie('formData') ) {
             var formData = JSON.parse($.cookie('formData'));
@@ -27,6 +29,7 @@
                     if ( key == "value" ) {
                         if ( name == 'color' || name == 'header-font' || name == 'body-font' ||  name == 'features' ||  name == 'custom_page' ) {
                             $('[name='+name+'][value="'+value+'"]').trigger('click');
+                            console.log('[name='+name+'][value="'+value+'"]');
                         } else if ( name == 'custom_page_input' ) {
                             $('[name='+name+']').show().val(value);
                         } else if ( name == 'layout_type' ) {
