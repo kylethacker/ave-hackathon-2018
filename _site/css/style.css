@@ -375,6 +375,19 @@ input {
     margin: 0 48px 0 0;
 }
 
+.selected-color{
+    font-weight:600;
+    font-size: 14px;
+    position: absolute;
+    display: none;
+}
+
+.color-option input[type="radio"] {
+    display:none;
+}
+
+
+
 .color-row#one{margin-bottom: 48px;}
 .color-row#two{margin-bottom: 0;}
 
@@ -388,8 +401,9 @@ input {
     margin-right: -24px;
 }
 
-.color-option input[type="radio"] {
-    display:none;
+.color-option input[type="radio"]:checked ~ .selected-color{
+    display: block;
+    
 }
 
 input[name=custom_page_input] {
@@ -456,14 +470,11 @@ input[type=checkbox] {
 
 /*checkbox is empty*/
 .custom-checkbox:after {
-    content: "\2714";
-    border: 0.1em solid #000;
+    content: url("/assets/images/Checkmark.svg");
+    border: 0.1em solid #00465A;
     border-radius: 0.2em;
     display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
+    padding: 0px 8px;
     margin-right: 0.2em;
     vertical-align: bottom;
     color: transparent;
@@ -477,11 +488,11 @@ input[type=checkbox] {
 
 /*checkbox is clicked / active*/
 [type=checkbox]:checked + .custom-checkbox:after{
-    background-color: MediumSeaGreen;
-    border-color: MediumSeaGreen;
+    background-color: #00465A;
+    border-color: #00465A;
     color: #fff;
+    font-weight: 800;
 }
-
 
 /* LAYOUT */
 
