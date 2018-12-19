@@ -27,7 +27,7 @@
                             $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
                         } else if ( name == 'layout_type' ){
                             $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
-                            $('#wireframe').next().text($.cookie('layout'));
+                            $('#layout_type').text($.cookie('layout'));
                         } else if ( name == 'exclude_features' ){
                             var features =$('#features').html();
                             var removed_values = value.split(',');

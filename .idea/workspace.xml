@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0b9bdffa-f7e2-4eda-9309-23882e2c3c41" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/brand.html" afterPath="$PROJECT_DIR$/_layouts/brand.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/designer.html" afterPath="$PROJECT_DIR$/_layouts/designer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/review.html" afterPath="$PROJECT_DIR$/_layouts/review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/404.html" afterPath="$PROJECT_DIR$/_site/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/brand.html" afterPath="$PROJECT_DIR$/_site/brand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/review-content.html" afterPath="$PROJECT_DIR$/_includes/review-content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/review-scripts.html" afterPath="$PROJECT_DIR$/_includes/review-scripts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/designer.html" afterPath="$PROJECT_DIR$/_site/designer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2018/12/18/welcome-to-jekyll.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2018/12/18/welcome-to-jekyll.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/review.html" afterPath="$PROJECT_DIR$/_site/review.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form-scripts.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form-scripts.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/form-scripts.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
@@ -98,18 +91,18 @@
       <file leaf-file-name="review-scripts.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/review-scripts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+            <state relative-caret-position="435">
+              <caret line="29" column="46" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review-content.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="review-content.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/review-content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="45">
+              <caret line="3" column="92" lean-forward="false" selection-start-line="3" selection-start-column="92" selection-end-line="3" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -182,11 +175,11 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/designer.html" />
         <option value="$PROJECT_DIR$/_layouts/review.html" />
-        <option value="$PROJECT_DIR$/_includes/review-content.html" />
-        <option value="$PROJECT_DIR$/_includes/review-scripts.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/_layouts/brand.html" />
         <option value="$PROJECT_DIR$/_includes/form-scripts.html" />
+        <option value="$PROJECT_DIR$/_includes/review-scripts.html" />
+        <option value="$PROJECT_DIR$/_includes/review-content.html" />
       </list>
     </option>
   </component>
@@ -295,7 +288,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23494000" />
+    <option name="totallyTimeSpent" value="23678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -686,22 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/review-content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/review-scripts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
@@ -722,6 +699,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="99" column="41" lean-forward="false" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/review-scripts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="46" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/review-content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="92" lean-forward="false" selection-start-line="3" selection-start-column="92" selection-end-line="3" selection-end-column="92" />
           <folding />
         </state>
       </provider>
