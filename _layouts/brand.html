@@ -291,12 +291,6 @@
     (function ($) {
 
         // Check them cookies
-        $('[name=visual_tone]').val($.cookie('tone'));
-        $('[name="layout_type"]').val($.cookie('layout'));
-
-        console.log($.cookie('tone'));
-        console.log($.cookie('layout'));
-
         if ( $.cookie('layout') ) {
             $('.layout-btn').text('Reselect Layout');
             $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
@@ -318,11 +312,9 @@
                         } else if ( name == 'custom_page_input' ) {
                             $('[name='+name+']').show().val(value);
                         } else if ( name == 'layout_type' ) {
-                            if ( value ) {
-                                $('[name='+name+']').val(value);
-                            } else {
-                                $('[name='+name+']').val($.cookie('layout'));
-                            }
+                            $('[name='+name+']').val($.cookie('layout'));
+                        } else if ( name == 'visual_tone' ) {
+                            $('[name='+name+']').val($.cookie('tone'));
                         } else {
                             $('[name='+name+']').val(value);
                         }

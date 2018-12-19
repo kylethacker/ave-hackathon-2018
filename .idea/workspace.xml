@@ -71,9 +71,8 @@
       <file leaf-file-name="brand.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="321" column="52" lean-forward="false" selection-start-line="321" selection-start-column="52" selection-end-line="321" selection-end-column="52" />
-              <caret line="323" column="52" lean-forward="false" selection-start-line="323" selection-start-column="52" selection-end-line="323" selection-end-column="52" />
+            <state relative-caret-position="-205">
+              <caret line="314" column="73" lean-forward="true" selection-start-line="314" selection-start-column="73" selection-end-line="314" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -285,7 +284,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17773000" />
+    <option name="totallyTimeSpent" value="18031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -706,9 +705,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/brand.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="321" column="52" lean-forward="false" selection-start-line="321" selection-start-column="52" selection-end-line="321" selection-end-column="52" />
-          <caret line="323" column="52" lean-forward="false" selection-start-line="323" selection-start-column="52" selection-end-line="323" selection-end-column="52" />
+        <state relative-caret-position="-205">
+          <caret line="314" column="73" lean-forward="true" selection-start-line="314" selection-start-column="73" selection-end-line="314" selection-end-column="73" />
           <folding />
         </state>
       </provider>
