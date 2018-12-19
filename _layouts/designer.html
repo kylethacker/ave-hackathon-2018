@@ -119,11 +119,6 @@
             });
         });
 
-// {"white":"%23333333","black":"%23CCCCCC","color1":"%2FF333DD","color2":"%23DD00FF","color3":"%23DDFFDD","color4":"%23DDFFDD","color5":"%23DDDDFF","color6":"%23FF00DD"}
-//        {"title": "Playfair Display", "body": "Dancing Script"}
-
-	    //url encode!!!!!!!!!
-
         features_json = JSON.stringify(features_json);
         color_json = JSON.stringify(color_json);
         page_title = JSON.stringify(page_title);
@@ -132,13 +127,9 @@
 
         console.log(generate_url);
 
-        var generate_url = 'http://avenuehq.test/wp-admin/admin-ajax.php?action=things&do=Q\\Sites\\hackSite&with[id]='+blog_to_copy+'&with[base_palette]='+color_json+'&with[title]='+page_title+'&with[username]=michelle&with[email]=michelle@avenuehq.com&with[header_title]='+page_title+'&with[header_tagline]='+tagline+'&with[hack_features]=['+features_json+']&with[font_options]='+font_json;
+        var generate_url = 'http://avenuehq.cool/wp-admin/admin-ajax.php?action=things&do=Q\\Sites\\hackSite&with[id]='+blog_to_copy+'&with[base_palette]='+color_json+'&with[title]='+page_title+'&with[username]=michelle&with[email]=michelle@avenuehq.com&with[header_title]='+page_title+'&with[header_tagline]='+tagline+'&with[hack_features]=['+features_json+']&with[font_options]='+font_json;
 
         $('.generate').attr('href', generate_url);
-
-
-
-        console.log(generate_url);
 
     })(jQuery);
 </script>
