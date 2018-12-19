@@ -220,8 +220,8 @@
 				<div class="block-content photos">
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/1.jpg">
-							<span class="photography-image"><img src="assets/images/lifestyle/1.jpg"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/photo_folder/1.jpg">
+							<span class="photography-image"><img src="assets/images/photo_folder/1.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 
 						</label>
@@ -229,33 +229,16 @@
 
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/2.jpg">
-							<span class="photography-image"><img src="assets/images/lifestyle/2.jpg"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/photo_folder/2.jpg">
+							<span class="photography-image"><img src="assets/images/photo_folder/2.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 						</label>
 					</div>
 
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/3.jpg">
-							<span class="photography-image"><img src="assets/images/lifestyle/3.jpg"></span>
-							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
-
-						</label>
-					</div>
-
-					<div class="photography-example">
-						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/4.jpg">
-							<span class="photography-image"><img src="assets/images/lifestyle/4.jpg"></span>
-							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
-						</label>
-					</div>
-
-					<div class="photography-example">
-						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/5.jpg">
-							<span class="photography-image"><img src="assets/images/lifestyle/5.jpg"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/photo_folder/3.jpg">
+							<span class="photography-image"><img src="assets/images/photo_folder/3.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 
 						</label>
@@ -263,8 +246,25 @@
 
 					<div class="photography-example">
 						<label>
-							<input type="checkbox" name="photography-image" value="assets/images/lifestyle/6.jpg">
-							<span class="photography-image"><img src="assets/images/lifestyle/6.jpg"></span>
+							<input type="checkbox" name="photography-image" value="assets/images/photo_folder/4.jpg">
+							<span class="photography-image"><img src="assets/images/photo_folder/4.jpg"></span>
+							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+						</label>
+					</div>
+
+					<div class="photography-example">
+						<label>
+							<input type="checkbox" name="photography-image" value="assets/images/photo_folder/5.jpg">
+							<span class="photography-image"><img src="assets/images/photo_folder/5.jpg"></span>
+							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
+
+						</label>
+					</div>
+
+					<div class="photography-example">
+						<label>
+							<input type="checkbox" name="photography-image" value="assets/images/photo_folder/6.jpg">
+							<span class="photography-image"><img src="assets/images/photo_folder/6.jpg"></span>
 							<span class="photography-selected"><img class="checkmark-outline" src="assets/images/checkmark-outline.svg">I like this</span>
 						</label>
 					</div>
@@ -330,6 +330,14 @@
         if ( $.cookie('tone') ) {
             $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
             $('#brandTitle').text($.cookie('tone'));
+            $('[name=photography-image]').each(function(){
+               var folder = $('[name=photography-image]').val().replace('photo_folder', $.cookie('tone'));
+               $(this).val(folder);
+            });
+            $('.photography-image img').each(function(){
+               var folder = $(this).attr('src').replace('photo_folder', $.cookie('tone'));
+               $(this).attr('src', folder);
+            });
         }
 
         // Check them cookies
