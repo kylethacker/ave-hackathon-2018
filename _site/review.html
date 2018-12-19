@@ -33,9 +33,10 @@
 		<div class="description">Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.
 		</div>
 		<a href="/brand" id="button" class="back">Back</a>
-		<a href="/complete" id="button" class="next">Look's Good!</a>
+		<a href="/complete" id="button" class="next">Looks Good!</a>
 	</div>
 	<div id="content">
+		<h3>Branding Review</h3>
 		<section id="review">
 			<span class="field">Visual Style</span><span id="visual_tone" class="value"></span>
 			<span class="field">Page Title</span><span id="page_title" class="value"></span>
@@ -44,8 +45,15 @@
 			<span class="field">Header Font</span><span id="header-font" class="value"></span>
 			<span class="field">Body Font</span><span id="body-font" class="value"></span>
 			<span class="field">Features</span><span id="features" class="value"></span>
-			<span class="field">Features Not included</span><span id="exclude_features" class="value"></span>
+			<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
 			<span class="field">Layout Type</span><span id="layout_type" class="value"></span>
+		</section>
+		<section id="block">
+			<h3>Additional comments</h3>
+			<p>Please enter any other comments that you would like to forward to your designer</p>
+
+			<textarea id="bio" name="additional_comments" rows="4" cols="50" placeholder=""></textarea>
+			<a href="/complete" id="button" class="next">All Done!</a>
 		</section>
 	</div>
 </div>
@@ -56,14 +64,13 @@
 <script>
     (function ($) {
 
-        // Check Cookies!
-//        $('[name=visual_tone]').val($.cookie('tone'));
-//
-//        if ( $.cookie('layout') ) {
-//            $('.layout-btn').text('Reselect Layout');
-//            $('[name=layout_type]').val($.cookie('layout'));
-//            $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
-//        }
+        $('.next').mousedown(function(){
+           $.cookie('additional_comments', $('[name=additional_comments]').val() );
+        });
+
+        if ( $.cookie('additional_comments' ) ) {
+            $('[name=additional_comments]').text($.cookie('additional_comments' ))
+        }
 
         // UndoSerializeArray
         if ( $.cookie('formData') ) {
