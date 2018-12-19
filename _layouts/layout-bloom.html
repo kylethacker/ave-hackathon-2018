@@ -4,12 +4,10 @@
 
 <div class="container">
 	<div id="sidebar">
-		<h1>Layout</h1>
-    </span>
-		<div class="description">Choose a Layout to see a preview
-		</div>
-
-		<a href="/brand" id="button" class="back">Back</a>
+		<h1>Build your brand</h1>
+		<h2>Layout</h2>
+		<div class="description">Choose a Layout to see a preview</div>
+		<a href="/brand#layout" id="button" class="back">Back</a>
 		{% include layout-options.html %}
 	</div>
 
@@ -19,7 +17,10 @@
 			<h3>Bloom Preview</h3>
 			<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>
 			<div class="preview-block">
-
+				<img src="//placehold.it/500x500" />
+				<div>
+					<a href="/brand#layout" id="button" class="back">Select Bloom</a>
+				</div>
 			</div>
 		</section>
 
@@ -28,4 +29,10 @@
 
 </body>
 
+<script>
+    (function ($) {
+        // Set Layout Cookie
+        $.cookie('layout', 'Bloom');
+    })(jQuery);
+</script>
 {% include footer.html %}

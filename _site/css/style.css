@@ -187,6 +187,8 @@ h2.tracker{margin-top:16px; font-weight:400;}
     width: 0%;
     padding: 0;
     border: 0;
+    transition: width 300ms ease-in-out;
+    -webkit-transition: width 300ms ease-in-out;
 }
 
 .intro {
@@ -226,6 +228,7 @@ h2.tracker{margin-top:16px; font-weight:400;}
 .col {
     width: 48%;
     display: inline-block;
+    vertical-align: top;
 }
 
 input[type="text"],
@@ -348,10 +351,15 @@ input[type="text"],
 
 /* FORM */
 
+#resetData {
+    font-size: xx-small;
+}
+
 textarea,
 input {
     font-size: inherit;
     margin-bottom: 15px;
+    padding:2px 5px;
 }
 
 .color-option {
@@ -374,6 +382,10 @@ input {
 
 .color-option input[type="radio"] {
     display:none;
+}
+
+input[name=custom_page_input] {
+    display: none;
 }
 
 .layout-options a {
@@ -404,6 +416,44 @@ input {
 
 .col input[type="checkbox"]:checked{
 
+}
+
+#button.submit:not(.ready) {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* LAYOUT */
+
+.preview-block {
+    text-align:center;
+}
+
+.preview-block img {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 10px solid #fff;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+/* REVIEW */
+
+#review {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#review .field {
+    width: 300px;
+    vertical-align: top;
+    margin-bottom: 30px;
+}
+
+#review .value {
+    width: 300px;
+    vertical-align: top;
+    margin-bottom: 30px;
 }
 
 /* COMPLETE */

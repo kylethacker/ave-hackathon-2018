@@ -8,8 +8,9 @@
 		<h3>Pick a theme</h3>
 		<div class="description">Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.
 		</div>
-		<a href="#" id="button" class="back">Back</a>
+		<a href="#" id="resetData">Reset Data</a>
 	</div>
+
 	<div id="content">
 		<div class="theme-boxes">
 			<div class="box">
@@ -61,7 +62,26 @@
 		</div>
 	</div>
 </div>
-
 </body>
 
+<script>
+    (function ($) {
+
+        // Save tone when clicked
+        $('.theme-boxes a').mousedown(function(){
+            $.cookie('tone', $(this).find('.description').text());
+        });
+
+        // Reset Function
+	    $('#resetData').click(function(e){
+	        e.preventDefault();
+            $.removeCookie('formData');
+            $.removeCookie('tone');
+            $.removeCookie('additional_comments');
+            $.removeCookie('layout');
+	        alert('cookies reset');
+	    });
+
+    })(jQuery);
+</script>
 {% include footer.html %}

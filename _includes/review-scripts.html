@@ -1,0 +1,59 @@
+<!--REVIEW SCRIPTS-->
+<script>
+    (function ($) {
+
+        // Spit out formData into Review Content section!
+        if ( $.cookie('formData') ) {
+            var formData = JSON.parse($.cookie('formData'));
+
+            $.each(formData, function(i){
+                $.each(formData[i], function(key, value){
+                    if ( key == "name" ) {
+                        name = value;
+                    }
+                    if ( key == "value" ) {
+                        if ( name == 'features' ) {
+                            var features = $('#'+name).html();
+                            if ( ! features ) {
+                                $('#'+name).html(value + '<br/>')
+                            } else {
+                                $('#'+name).html(features +value+ '<br/>')
+                            }
+                        } else if ( name == 'custom_page_input' ){
+                            var features =$('#features').html();
+                            features = features + value;
+                            $('#features').html(features);
+                        } else if ( name == 'visual_tone' ){
+                            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+                        } else if ( name == 'layout_type' ){
+                            $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
+                            $('#layout_type').text($.cookie('layout'));
+                        } else if ( name == 'exclude_features' ){
+                            var features =$('#features').html();
+                            var removed_values = value.split(',');
+                            $.each(removed_values, function(i){
+                                features = features.replace(removed_values[i]+"<br>", '');
+                            });
+                            $('#features').html(features);
+                            value = value.replace(/\,/g,'<br/>');
+                            $('#'+name).html(value);
+                        } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
+                            var color_num = name.replace('color', '');
+                            $('#colorOptions .color-option:nth-child('+color_num+')').attr('data-hex');
+                            $('#'+name).html(value);
+                        } else {
+                            $('#'+name).text(value);
+                        }
+                    }
+                });
+            });
+
+            // Color Hex Helper
+            $('[data-hex]').each(function () {
+                var color = $(this).attr('data-hex');
+                $(this).css('background-color', color);
+            });
+        }
+
+    })(jQuery);
+</script>

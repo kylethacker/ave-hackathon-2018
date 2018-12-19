@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-	<title>Your awesome title | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
-	<meta name="generator" content="Jekyll v3.8.5" />
-	<meta property="og:title" content="Your awesome title" />
-	<meta property="og:locale" content="en_US" />
-	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-	<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-	<link rel="canonical" href="http://localhost:4000/" />
-	<meta property="og:url" content="http://localhost:4000/" />
-	<meta property="og:site_name" content="Your awesome title" />
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Super amazing app by Kyle, Nick, Rob, Jake and Michelle, please give us all the trophies and stickers." />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<link rel="canonical" href="http://localhost:4000/designer.html">
+
+	<title>Brand yo-self </title>
 
 	<link rel="stylesheet" href="/assets/main.css">
 	<link rel="stylesheet" href="/css/style.css">
-	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
+
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js""></script>
+
 </head>
 
 
@@ -27,80 +27,117 @@
 
 <div class="container">
 	<div id="sidebar">
-		<h1>Designer Review</h1>
-		<div class="description">Hi Rob, finalize the branding for your client here!!!!!!!!
-		</div>
+		<h1>Branding Review</h1>
+		<div class="description">Hi Rob, here are the details that the client has submitted regarding how they would to brand and personalize their website.</div>
+		<div class="description">If you're ready to build, click the button below and you'll be redirected to the client's newly generated site, with all of the necessary details pulled in</div>
+
+		<a href="#" id="button" class="back">Generate Template</a>
 
 	</div>
 
 	<div id="content">
-
-		<section class="intro">
-			<h3>Client Style Review</h3>
-			<p>The client submitted this .</p>
-		</section>
-
-
-		<!--<section class="intro">-->
-			<!--<h3>Button Style</h3>-->
-			<!--<p>Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</p>-->
-		<!--</section>-->
-
-		<!--<section id="block">-->
-			<!--<h3>Font Style</h3>-->
-			<!--<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>-->
-			<!--<div class="block-content">-->
-
-			<!--</div>-->
-		<!--</section>-->
-
-
+		<h3>Branding Review</h3>
+		<!--REVIEW CONTENT-->
+<section id="review">
+	<span class="field">Visual Style</span><span id="visual_tone" class="value"><img id="poster" src=""></span>
+	<span class="field">Layout Type</span><span class="value"><span id="layout_type"></span><img id="wireframe" src=""></span>
+	<span class="field">Page Title</span><span id="page_title" class="value"></span>
+	<span class="field">Biography</span><span id="biography" class="value"></span>
+	<span class="field">Color Palette</span>
+	<span class="value">
+				<div id="colorOptions">
+					<span class="color-option">
+						<span data-hex="#111111">color1</span>
+						<span data-hex="#222222">color2</span>
+						<span data-hex="#333333">color3</span>
+						<span data-hex="#444444">color4</span>
+					</span>
+				</div>
+				<div id="color"></div>
+			</span>
+	<span class="field">Header Font</span><span id="header-font" class="value"></span>
+	<span class="field">Body Font</span><span id="body-font" class="value"></span>
+	<span class="field">Features</span><span id="features" class="value"></span>
+	<span class="field">Features Removed</span><span id="exclude_features" class="value"></span>
+</section>
 		<section id="block">
-
-			<a href="/review" id="button" class="back">Generate Template!!!</a>
+			<h3>Notes from the client</h3>
+			<span id="other"></span>
 		</section>
-
 
 	</div>
 </div>
 
 </body>
 
-
 <script>
     (function ($) {
 
-        // Progress checker
-
-	    var form = $('input:not([type=checkbox]), textarea');
-	    var total = form.length;
-	    var progress = 0;
-
-        form.each(function(){
-            var value = $(this).val();
-             if ( value ) {
-                 progress = progress + 1;
-             }
-
-            console.log("on load: " +progress);
-        });
-
-        form.change(function(){
-            var value = $(this).val();
-            if ( value ) {
-                progress = progress + 1;
-            } else {
-                progress = progress - 1;
-            }
-
-            console.log(progress);
-            $('.tracker').text((progress/total * 100) + '% Complete');
-            $('.progress').css('width', (progress/total * 100)+"%");
-        });
-
+        // If there is extra comments, show them
+        if ( $.cookie('additional_comments' ) ) {
+            $('#other').text($.cookie('additional_comments' ))
+        }
 
     })(jQuery);
 </script>
+<!--REVIEW SCRIPTS-->
+<script>
+    (function ($) {
 
+        // Spit out formData into Review Content section!
+        if ( $.cookie('formData') ) {
+            var formData = JSON.parse($.cookie('formData'));
+
+            $.each(formData, function(i){
+                $.each(formData[i], function(key, value){
+                    if ( key == "name" ) {
+                        name = value;
+                    }
+                    if ( key == "value" ) {
+                        if ( name == 'features' ) {
+                            var features = $('#'+name).html();
+                            if ( ! features ) {
+                                $('#'+name).html(value + '<br/>')
+                            } else {
+                                $('#'+name).html(features +value+ '<br/>')
+                            }
+                        } else if ( name == 'custom_page_input' ){
+                            var features =$('#features').html();
+                            features = features + value;
+                            $('#features').html(features);
+                        } else if ( name == 'visual_tone' ){
+                            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+                        } else if ( name == 'layout_type' ){
+                            $('#wireframe').attr('src', 'assets/images/Layouts/'+$.cookie('layout')+'.png');
+                            $('#layout_type').text($.cookie('layout'));
+                        } else if ( name == 'exclude_features' ){
+                            var features =$('#features').html();
+                            var removed_values = value.split(',');
+                            $.each(removed_values, function(i){
+                                features = features.replace(removed_values[i]+"<br>", '');
+                            });
+                            $('#features').html(features);
+                            value = value.replace(/\,/g,'<br/>');
+                            $('#'+name).html(value);
+                        } else if ( name == 'color1' || name == 'color2'  || name == 'color3'  || name == 'color4' ){
+                            var color_num = name.replace('color', '');
+                            $('#colorOptions .color-option:nth-child('+color_num+')').attr('data-hex');
+                            $('#'+name).html(value);
+                        } else {
+                            $('#'+name).text(value);
+                        }
+                    }
+                });
+            });
+
+            // Color Hex Helper
+            $('[data-hex]').each(function () {
+                var color = $(this).attr('data-hex');
+                $(this).css('background-color', color);
+            });
+        }
+
+    })(jQuery);
+</script>
 </html>
 

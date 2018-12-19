@@ -1,0 +1,151 @@
+<!--FORM SCRIPTS-->
+<script>
+    (function ($) {
+
+        // Set up poster for visual tone
+        if ( $.cookie('tone') ) {
+            $('#poster').attr('src', 'assets/images/'+$.cookie('tone')+'.png');
+            $('#brandTitle').text($.cookie('tone'));
+        }
+
+        // Check them cookies
+        if ( $.cookie('layout') ) {
+            $('.layout-btn').text('Reselect Layout');
+            $('.chosen-layout').text("Chosen Layout: "+$.cookie('layout'));
+        }
+
+        // Is there formData? Prefill the form!
+        if ( $.cookie('formData') ) {
+            var formData = JSON.parse($.cookie('formData'));
+            var name;
+            $('[name=features]').removeAttr('checked');
+            $.each(formData, function(i){
+                $.each(formData[i], function(key, value){
+                    if ( key == "name" ) {
+                        name = value;
+                    }
+                    if ( key == "value" ) {
+                        if ( name == 'color' || name == 'header-font' || name == 'body-font' ||  name == 'features' ||  name == 'custom_page' ) {
+                            $('[name='+name+'][value="'+value+'"]').trigger('click');
+                        } else if ( name == 'custom_page_input' ) {
+                            $('[name='+name+']').show().val(value);
+                        } else if ( name == 'layout_type' ) {
+                            $('[name='+name+']').val($.cookie('layout'));
+                        } else if ( name == 'visual_tone' ) {
+                            $('[name='+name+']').val($.cookie('tone'));
+                        } else {
+                            $('[name='+name+']').val(value);
+                        }
+                    }
+                });
+            });
+        }
+
+        // Color Hex Helper
+        $('[data-hex]').each(function () {
+            var color = $(this).attr('data-hex');
+            $(this).css('background-color', color);
+        });
+
+        // When colors are picked, setup palettes color1, color2 and etc
+        $('[name="color"]').change(function(){
+            var colorOne = $(this).next();
+            var colorTwo = colorOne.next();
+            var colorThree = colorTwo.next();
+            var colorFour = colorThree.next();
+            $('[name=color1]').val(colorOne.attr('data-hex'));
+            $('[name=color2]').val(colorTwo.attr('data-hex'));
+            $('[name=color3]').val(colorThree.attr('data-hex'));
+            $('[name=color4]').val(colorFour.attr('data-hex'));
+            $('[name=color1]').trigger('change');
+        });
+
+        // If Custom Page is selected, allow custom input
+        $('[name=custom_page]').change(function(){
+            if ( $(this).is(':checked') ) {
+                $('[name=custom_page_input]').show();
+            } else {
+                $('[name=custom_page_input]').hide();
+            }
+        });
+
+        // Progress checker
+        var progressFields = $('[name="page_title"], [name="biography"], [name="color1"], [name="layout_type"]');
+        var total = progressFields.length;
+        var progress = 0;
+        var percent;
+
+        progressFields.each(function(){
+            var value = $(this).val();
+            if ( value ) {
+                $(this).addClass('inputCompleted');
+            } else {
+                $(this).removeClass('inputCompleted');
+            }
+
+            progress = $('.inputCompleted').length;
+
+            percent = (progress/total * 100);
+
+            $('.tracker').text(percent + '% Complete');
+            $('.progress').css('width', percent+"%");
+
+            if ( percent >= 100 ) {
+                $('.submit').addClass('ready');
+            } else {
+                $('.submit').removeClass('ready');
+            }
+        });
+
+        progressFields.change(function(){;
+            var value = $(this).val();
+            if ( value ) {
+                $(this).addClass('inputCompleted');
+            } else {
+                $(this).removeClass('inputCompleted');
+            }
+
+            progress = $('.inputCompleted').length;
+
+            percent = (progress/total * 100);
+
+            $('.tracker').text(percent + '% Complete');
+            $('.progress').css('width', percent+"%");
+
+            if ( percent >= 100 ) {
+                $('.submit').addClass('ready');
+            } else {
+                $('.submit').removeClass('ready');
+            }
+        });
+
+        // Form Submit
+
+        $('.submit').mousedown(function (e) {
+            var exclude_features = [];
+            if ( $('[name=features]:not(:checked)') ) {
+                $('[name=features]:not(:checked)').each(function(){
+                    exclude_features.push($(this).val());
+                })
+            }
+            $('[name=exclude_features]').val(exclude_features);
+
+            $.cookie('formData', JSON.stringify($('#brandForm').serializeArray()));
+        });
+
+        // Form Save
+
+        $('.layout-btn').mousedown(function (e) {
+            var exclude_features = [];
+            if ( $('[name=features]:not(:checked)') ) {
+                $('[name=features]:not(:checked)').each(function(){
+                    exclude_features.push($(this).val());
+                })
+            }
+            $('[name=exclude_features]').val(exclude_features);
+
+            $.cookie('formData', JSON.stringify($('#brandForm').serializeArray()));
+        });
+
+    })(jQuery);
+</script>

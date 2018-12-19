@@ -4,43 +4,36 @@
 
 <div class="container">
 	<div id="sidebar">
-		<h1>Designer Review</h1>
-		<div class="description">Hi Rob, finalize the branding for your client here!!!!!!!!
-		</div>
+		<h1>Branding Review</h1>
+		<div class="description">Hi Rob, here are the details that the client has submitted regarding how they would to brand and personalize their website.</div>
+		<div class="description">If you're ready to build, click the button below and you'll be redirected to the client's newly generated site, with all of the necessary details pulled in</div>
+
+		<a href="#" id="button" class="back">Generate Template</a>
 
 	</div>
 
 	<div id="content">
-
-		<section class="intro">
-			<h3>Client Style Review</h3>
-			<p>The client submitted this .</p>
-		</section>
-
-
-		<!--<section class="intro">-->
-			<!--<h3>Button Style</h3>-->
-			<!--<p>Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</p>-->
-		<!--</section>-->
-
-		<!--<section id="block">-->
-			<!--<h3>Font Style</h3>-->
-			<!--<span class="description">Nam suscipit ante ac euismod egestas. Pellentesque nibh nunc, scelerisque nec auctor vel, faucibus hendrerit nisl. Phasellus consequat, est vitae sagittis lobortis.</span>-->
-			<!--<div class="block-content">-->
-
-			<!--</div>-->
-		<!--</section>-->
-
-
+		<h3>Branding Review</h3>
+		{% include review-content.html %}
 		<section id="block">
-
-			<a href="/review" id="button" class="back">Generate Template!!!</a>
+			<h3>Notes from the client</h3>
+			<span id="other"></span>
 		</section>
-
 
 	</div>
 </div>
 
 </body>
 
+<script>
+    (function ($) {
+
+        // If there is extra comments, show them
+        if ( $.cookie('additional_comments' ) ) {
+            $('#other').text($.cookie('additional_comments' ))
+        }
+
+    })(jQuery);
+</script>
+{% include review-scripts.html %}
 {% include footer.html %}

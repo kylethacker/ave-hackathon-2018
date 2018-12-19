@@ -8,13 +8,37 @@
 		<div class="description">Here are some starting themes to pick from, once you’ve selected one we’ll dig into the specific fonts, colours, imagery, and layouts that will represent your brand and effectively help you reach your audience.
 		</div>
 		<a href="/brand" id="button" class="back">Back</a>
-		<a href="/complete" id="button" class="next">Look's Good!</a>
+		<a href="/complete" id="button" class="next">Looks Good!</a>
 	</div>
 	<div id="content">
+		<h3>Branding Review</h3>
+		{% include review-content.html %}
+		<section id="block">
+			<h3>Additional comments</h3>
+			<p>Please enter any other comments that you would like to forward to your designer</p>
 
+			<textarea id="bio" name="additional_comments" rows="4" cols="50" placeholder=""></textarea>
+			<a href="/complete" id="button" class="next">All Done!</a>
+		</section>
 	</div>
 </div>
 
 </body>
 
+<script>
+    (function ($) {
+
+        // Save any additional comments!
+        $('.next').mousedown(function(){
+           $.cookie('additional_comments', $('[name=additional_comments]').val() );
+        });
+
+        // If there are comments already, spit 'em out
+        if ( $.cookie('additional_comments' ) ) {
+            $('[name=additional_comments]').text($.cookie('additional_comments' ))
+        }
+
+    })(jQuery);
+</script>
+{% include review-scripts.html %}
 {% include footer.html %}
